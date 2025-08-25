@@ -1,0 +1,504 @@
+1
+00:00:00,000 --> 00:00:04,110
+<v ->[Maximilian Schwarzmüller] Now there is one special thing</v>
+
+2
+00:00:04,110 --> 00:00:04,943
+about this course
+
+3
+00:00:04,943 --> 00:00:06,420
+which I wanna highlight.
+
+4
+00:00:06,420 --> 00:00:08,810
+You got two main options
+
+5
+00:00:08,810 --> 00:00:11,160
+for going through that course,
+
+6
+00:00:11,160 --> 00:00:13,240
+for taking that course.
+
+7
+00:00:13,240 --> 00:00:15,480
+You have the Standard Approach,
+
+8
+00:00:15,480 --> 00:00:18,060
+which is the approach which I recommend.
+
+9
+00:00:18,060 --> 00:00:20,150
+There you start at Lecture One
+
+10
+00:00:20,150 --> 00:00:21,370
+and Section One.
+
+11
+00:00:21,370 --> 00:00:23,480
+I guess you already did this,
+
+12
+00:00:23,480 --> 00:00:24,580
+but then you continue
+
+13
+00:00:24,580 --> 00:00:26,040
+going through this course,
+
+14
+00:00:26,040 --> 00:00:28,890
+step-by-step, lecture by lecture.
+
+15
+00:00:28,890 --> 00:00:32,300
+You can skip the ReactJS refresher module
+
+16
+00:00:32,300 --> 00:00:33,870
+if you don't need it, of course
+
+17
+00:00:33,870 --> 00:00:35,530
+but if you need to fill some gaps
+
+18
+00:00:35,530 --> 00:00:38,540
+also go through that course section.
+
+19
+00:00:38,540 --> 00:00:40,620
+And then at the end of this course,
+
+20
+00:00:40,620 --> 00:00:43,810
+you have that NextJS summary module,
+
+21
+00:00:43,810 --> 00:00:45,060
+which I mentioned.
+
+22
+00:00:45,060 --> 00:00:46,500
+There I will walk you
+
+23
+00:00:46,500 --> 00:00:48,260
+through all the core features again,
+
+24
+00:00:48,260 --> 00:00:49,140
+we'll again build
+
+25
+00:00:49,140 --> 00:00:51,170
+a small mini project again
+
+26
+00:00:51,170 --> 00:00:52,650
+and you will basically get
+
+27
+00:00:52,650 --> 00:00:54,980
+a quick overview of what you learned
+
+28
+00:00:54,980 --> 00:00:57,030
+and of all the core features.
+
+29
+00:00:57,030 --> 00:00:59,600
+That is a great course section to take,
+
+30
+00:00:59,600 --> 00:01:01,210
+once you're done with the course,
+
+31
+00:01:01,210 --> 00:01:02,043
+which is why
+
+32
+00:01:02,043 --> 00:01:03,510
+it is at the end of the course
+
+33
+00:01:03,510 --> 00:01:05,690
+to quickly get a quick overview
+
+34
+00:01:05,690 --> 00:01:08,030
+of the entire core concepts again.
+
+35
+00:01:08,030 --> 00:01:09,960
+And it's also a great module
+
+36
+00:01:09,960 --> 00:01:11,900
+to come back to in the future,
+
+37
+00:01:11,900 --> 00:01:13,420
+if you took the course
+
+38
+00:01:13,420 --> 00:01:14,840
+a couple of months ago
+
+39
+00:01:14,840 --> 00:01:15,960
+and you quickly wanna
+
+40
+00:01:15,960 --> 00:01:17,220
+go through it again
+
+41
+00:01:17,220 --> 00:01:18,440
+without going through
+
+42
+00:01:18,440 --> 00:01:19,900
+the entire course again,
+
+43
+00:01:19,900 --> 00:01:23,130
+which is of course not that short.
+
+44
+00:01:23,130 --> 00:01:24,750
+And that's the standard approach
+
+45
+00:01:24,750 --> 00:01:25,610
+which I recommend.
+
+46
+00:01:25,610 --> 00:01:27,800
+That you simply go through that course
+
+47
+00:01:27,800 --> 00:01:29,970
+and then take the summary module
+
+48
+00:01:29,970 --> 00:01:32,623
+as a well, summary module.
+
+49
+00:01:33,500 --> 00:01:37,000
+But you can also take the Summary Approach
+
+50
+00:01:37,000 --> 00:01:38,290
+as I'd like to call it.
+
+51
+00:01:38,290 --> 00:01:39,660
+We could also call it
+
+52
+00:01:39,660 --> 00:01:41,940
+the Quickstart approach,
+
+53
+00:01:41,940 --> 00:01:43,740
+which you can go for
+
+54
+00:01:43,740 --> 00:01:45,000
+if you're in a hurry.
+
+55
+00:01:45,000 --> 00:01:46,380
+If you have limited time.
+
+56
+00:01:46,380 --> 00:01:47,710
+If you wanna learn
+
+57
+00:01:47,710 --> 00:01:49,770
+the essence of NextJS
+
+58
+00:01:49,770 --> 00:01:52,060
+as quickly as possible.
+
+59
+00:01:52,060 --> 00:01:53,480
+For this approach,
+
+60
+00:01:53,480 --> 00:01:56,340
+you should skip all the Next modules
+
+61
+00:01:56,340 --> 00:01:59,660
+up to this NextJS summary module.
+
+62
+00:01:59,660 --> 00:02:02,550
+Only take their ReactJS refresher module
+
+63
+00:02:02,550 --> 00:02:03,650
+first if you need it.
+
+64
+00:02:03,650 --> 00:02:04,990
+So take that first
+
+65
+00:02:04,990 --> 00:02:07,810
+and then the NextJS summary module
+
+66
+00:02:07,810 --> 00:02:09,330
+if you need to refresh
+
+67
+00:02:09,330 --> 00:02:11,720
+your ReactJS knowledge,
+
+68
+00:02:11,720 --> 00:02:12,956
+otherwise skip that
+
+69
+00:02:12,956 --> 00:02:15,660
+ReactJS refresher module as well
+
+70
+00:02:15,660 --> 00:02:17,250
+and move forward to
+
+71
+00:02:17,250 --> 00:02:19,750
+the NextJS summary module.
+
+72
+00:02:19,750 --> 00:02:21,250
+With that, you will then learn
+
+73
+00:02:21,250 --> 00:02:23,130
+the essence of NextJS.
+
+74
+00:02:23,130 --> 00:02:26,090
+The core features that make up NextJS
+
+75
+00:02:26,090 --> 00:02:28,350
+in the shortest time possible,
+
+76
+00:02:28,350 --> 00:02:30,880
+you will still get a mini project there,
+
+77
+00:02:30,880 --> 00:02:32,650
+but of course we're not going to dive
+
+78
+00:02:32,650 --> 00:02:35,700
+into NextJS as deeply as we do it
+
+79
+00:02:35,700 --> 00:02:37,270
+in the entire course.
+
+80
+00:02:37,270 --> 00:02:39,920
+This module is built such that
+
+81
+00:02:39,920 --> 00:02:42,330
+you can go through it first
+
+82
+00:02:42,330 --> 00:02:45,280
+without taking the entire course first.
+
+83
+00:02:45,280 --> 00:02:46,600
+It is built such that
+
+84
+00:02:46,600 --> 00:02:48,600
+it works stand alone.
+
+85
+00:02:48,600 --> 00:02:51,742
+And it then summarizes the core concepts
+
+86
+00:02:51,742 --> 00:02:53,680
+NextJS has to offer,
+
+87
+00:02:53,680 --> 00:02:57,020
+of course without diving as deeply
+
+88
+00:02:57,020 --> 00:02:58,610
+into those concepts
+
+89
+00:02:58,610 --> 00:03:01,300
+and into your different configuration options,
+
+90
+00:03:01,300 --> 00:03:04,020
+as the rest of this course does.
+
+91
+00:03:04,020 --> 00:03:05,740
+This course section,
+
+92
+00:03:05,740 --> 00:03:07,060
+this summary section
+
+93
+00:03:07,060 --> 00:03:08,760
+will also not include
+
+94
+00:03:08,760 --> 00:03:10,260
+all the features I cover
+
+95
+00:03:10,260 --> 00:03:12,210
+in this course in general.
+
+96
+00:03:12,210 --> 00:03:14,760
+We'll not dive into authentication Deere
+
+97
+00:03:14,760 --> 00:03:17,310
+or image optimization, for example,
+
+98
+00:03:17,310 --> 00:03:20,460
+simply because it is a summary module,
+
+99
+00:03:20,460 --> 00:03:22,780
+an overview module.
+
+100
+00:03:22,780 --> 00:03:25,010
+This course is as long as it is
+
+101
+00:03:25,010 --> 00:03:26,090
+for a good reason.
+
+102
+00:03:26,090 --> 00:03:27,890
+And therefore the summary module
+
+103
+00:03:27,890 --> 00:03:30,150
+does not replace this course.
+
+104
+00:03:30,150 --> 00:03:31,260
+But if you just wanna get
+
+105
+00:03:31,260 --> 00:03:33,310
+a quick overview of NextJS,
+
+106
+00:03:33,310 --> 00:03:35,660
+if you wanna quickly dive into it
+
+107
+00:03:35,660 --> 00:03:37,670
+and learn about the core features
+
+108
+00:03:37,670 --> 00:03:39,160
+and you wanna dive deeply
+
+109
+00:03:39,160 --> 00:03:40,550
+into the course later,
+
+110
+00:03:40,550 --> 00:03:42,760
+you can go for this summary approach
+
+111
+00:03:42,760 --> 00:03:45,830
+and go through this summary module first
+
+112
+00:03:45,830 --> 00:03:47,550
+and then possibly come back
+
+113
+00:03:47,550 --> 00:03:48,840
+to the entire course
+
+114
+00:03:48,840 --> 00:03:50,500
+at a later point of time
+
+115
+00:03:50,500 --> 00:03:52,860
+to go through that as well.
+
+116
+00:03:52,860 --> 00:03:54,010
+Now, as I mentioned,
+
+117
+00:03:54,010 --> 00:03:55,500
+my recommended approach
+
+118
+00:03:55,500 --> 00:03:57,000
+is the left one though.
+
+119
+00:03:57,000 --> 00:03:58,190
+That is the approach
+
+120
+00:03:58,190 --> 00:03:59,930
+with which you will get the most
+
+121
+00:03:59,930 --> 00:04:01,190
+out of this course.
+
+122
+00:04:01,190 --> 00:04:02,520
+That is the approach
+
+123
+00:04:02,520 --> 00:04:03,500
+with which you will
+
+124
+00:04:03,500 --> 00:04:06,040
+really learn NextJS in depth.
+
+125
+00:04:06,040 --> 00:04:07,280
+But if you're in a hurry,
+
+126
+00:04:07,280 --> 00:04:09,623
+you can go for the right approach instead.
+

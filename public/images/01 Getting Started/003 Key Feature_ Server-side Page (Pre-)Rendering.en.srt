@@ -1,0 +1,512 @@
+1
+00:00:01,856 --> 00:00:03,310
+<v Maximilian>So let's have a look</v>
+
+2
+00:00:03,310 --> 00:00:06,920
+at the NextJS key features and benefits.
+
+3
+00:00:06,920 --> 00:00:10,190
+And whilst we go through them, it will also become clearer,
+
+4
+00:00:10,190 --> 00:00:15,190
+why I like to call NextJS a full stack framework as well.
+
+5
+00:00:15,590 --> 00:00:20,590
+I would say the most important key feature NextJS adds,
+
+6
+00:00:21,010 --> 00:00:24,860
+is the built-in server-side rendering support.
+
+7
+00:00:24,860 --> 00:00:26,200
+Now in case it's not clear
+
+8
+00:00:26,200 --> 00:00:28,470
+what server-side rendering means,
+
+9
+00:00:28,470 --> 00:00:32,960
+server-side rendering is all about preparing the content
+
+10
+00:00:32,960 --> 00:00:37,080
+of a page on the server instead of on the client.
+
+11
+00:00:37,080 --> 00:00:40,400
+If you take a standard React application built
+
+12
+00:00:40,400 --> 00:00:45,390
+with just React, then if you inspect the source code
+
+13
+00:00:45,390 --> 00:00:48,550
+of a loaded React page, you will notice
+
+14
+00:00:48,550 --> 00:00:51,040
+that the page is actually pretty empty
+
+15
+00:00:51,040 --> 00:00:52,380
+right from the start.
+
+16
+00:00:52,380 --> 00:00:55,880
+You only have a basic HTML skeleton there,
+
+17
+00:00:55,880 --> 00:00:58,320
+and then some entry point,
+
+18
+00:00:58,320 --> 00:01:01,320
+some div with an idea route typically,
+
+19
+00:01:01,320 --> 00:01:05,310
+into which the React app is loaded and rendered.
+
+20
+00:01:05,310 --> 00:01:08,670
+But all of that rendering, is done by React.
+
+21
+00:01:08,670 --> 00:01:12,560
+And since React is a client side, JavaScript library,
+
+22
+00:01:12,560 --> 00:01:15,780
+all that rendering happens on the client,
+
+23
+00:01:15,780 --> 00:01:18,280
+so in the browsers of your users,
+
+24
+00:01:18,280 --> 00:01:20,950
+it's not happening on the server.
+
+25
+00:01:20,950 --> 00:01:24,740
+And as a result, the actual HTML code,
+
+26
+00:01:24,740 --> 00:01:27,580
+which is sent from the server to the client,
+
+27
+00:01:27,580 --> 00:01:30,883
+when a user visits your page is pretty empty.
+
+28
+00:01:31,810 --> 00:01:35,100
+Now, that is not necessarily a big problem.
+
+29
+00:01:35,100 --> 00:01:38,930
+It depends on what you're building, but it can be a problem.
+
+30
+00:01:38,930 --> 00:01:41,780
+Because for example, if your page also,
+
+31
+00:01:41,780 --> 00:01:43,980
+fetches some data from a server
+
+32
+00:01:43,980 --> 00:01:45,190
+that should be displayed
+
+33
+00:01:45,190 --> 00:01:46,560
+like a list of meetups,
+
+34
+00:01:46,560 --> 00:01:47,890
+as we're doing it here,
+
+35
+00:01:47,890 --> 00:01:51,620
+then the user might initially see some loading state,
+
+36
+00:01:51,620 --> 00:01:54,730
+a flickering page for a fraction of a second,
+
+37
+00:01:54,730 --> 00:01:58,170
+whilst the request is on its way, fetching the data
+
+38
+00:01:58,170 --> 00:02:00,790
+because data fetching only begins
+
+39
+00:02:00,790 --> 00:02:04,680
+once the JavaScript code executed on the client.
+
+40
+00:02:04,680 --> 00:02:06,140
+And then we still have to wait
+
+41
+00:02:06,140 --> 00:02:08,833
+for the response of that outgoing request.
+
+42
+00:02:09,980 --> 00:02:12,990
+Simply because the page which we requested
+
+43
+00:02:12,990 --> 00:02:15,910
+did not yet contain that data.
+
+44
+00:02:15,910 --> 00:02:18,960
+Now, again, that is not necessarily a problem,
+
+45
+00:02:18,960 --> 00:02:21,820
+but of course it might not be the user experience
+
+46
+00:02:21,820 --> 00:02:23,640
+you want to offer.
+
+47
+00:02:23,640 --> 00:02:25,640
+Now it can also be a problem
+
+48
+00:02:25,640 --> 00:02:29,110
+if search engine optimization matters to you.
+
+49
+00:02:29,110 --> 00:02:32,040
+Now, this does not matter for all pages.
+
+50
+00:02:32,040 --> 00:02:34,990
+If you have a administration dashboard
+
+51
+00:02:34,990 --> 00:02:37,490
+which is only reached by logging in,
+
+52
+00:02:37,490 --> 00:02:39,450
+then search engine optimization
+
+53
+00:02:39,450 --> 00:02:40,491
+does not matter there
+
+54
+00:02:40,491 --> 00:02:44,490
+because search engines will never see that dashboard.
+
+55
+00:02:44,490 --> 00:02:46,180
+It's highly user specific,
+
+56
+00:02:46,180 --> 00:02:48,810
+and you need to log in any ways,
+
+57
+00:02:48,810 --> 00:02:51,620
+but if you have a public facing page with a lot
+
+58
+00:02:51,620 --> 00:02:55,040
+of content that should be found through search engines,
+
+59
+00:02:55,040 --> 00:02:58,520
+then of course, search engine optimization does matter.
+
+60
+00:02:58,520 --> 00:03:02,040
+So for example, here, where we got this list of meetups,
+
+61
+00:03:02,040 --> 00:03:04,460
+we see those meetups as a user
+
+62
+00:03:04,460 --> 00:03:08,840
+but the search engine crawlers will actually only see
+
+63
+00:03:08,840 --> 00:03:11,650
+that initially empty HTML page
+
+64
+00:03:11,650 --> 00:03:13,490
+which we're getting from a server.
+
+65
+00:03:13,490 --> 00:03:17,880
+So, that content is not picked up by search engine crawlers
+
+66
+00:03:17,880 --> 00:03:20,800
+and that can be a problem.
+
+67
+00:03:20,800 --> 00:03:23,770
+And that's where a server-side rendering could help us.
+
+68
+00:03:23,770 --> 00:03:27,770
+If that page would be pre-rendered on the server,
+
+69
+00:03:27,770 --> 00:03:31,410
+if that data fetching somehow could be done on the server,
+
+70
+00:03:31,410 --> 00:03:33,550
+when the request hits that server
+
+71
+00:03:33,550 --> 00:03:36,470
+and then the finished page would be served
+
+72
+00:03:36,470 --> 00:03:39,820
+to our users and to the search engine crawlers,
+
+73
+00:03:39,820 --> 00:03:43,420
+then users would not have that flickering loading state
+
+74
+00:03:43,420 --> 00:03:47,280
+and search engines would see our page content.
+
+75
+00:03:47,280 --> 00:03:49,930
+And that's the problem server-side rendering solves.
+
+76
+00:03:49,930 --> 00:03:53,270
+It allows us to pre-render React pages,
+
+77
+00:03:53,270 --> 00:03:56,770
+React components on a server.
+
+78
+00:03:56,770 --> 00:04:00,660
+Now ReactJS actually has built-in features
+
+79
+00:04:00,660 --> 00:04:03,510
+that allow you to add server-side rendering
+
+80
+00:04:03,510 --> 00:04:05,410
+but it can be tricky to get that right.
+
+81
+00:04:05,410 --> 00:04:08,900
+And it requires extra setup from your side.
+
+82
+00:04:08,900 --> 00:04:12,400
+With NextJS, that becomes way easier
+
+83
+00:04:12,400 --> 00:04:16,490
+because NextJS has built-in server-side rendering.
+
+84
+00:04:16,490 --> 00:04:20,310
+It automatically pre renders your pages
+
+85
+00:04:20,310 --> 00:04:22,530
+and that means that with NextJS,
+
+86
+00:04:22,530 --> 00:04:25,350
+if you build a standard NextJS app,
+
+87
+00:04:25,350 --> 00:04:28,430
+without any extra setup from your side,
+
+88
+00:04:28,430 --> 00:04:30,000
+if you visit such a page,
+
+89
+00:04:30,000 --> 00:04:34,730
+it was pre-rendered on the server by default out of the box.
+
+90
+00:04:34,730 --> 00:04:37,118
+And that means that it's great
+
+91
+00:04:37,118 --> 00:04:38,340
+for a search engine optimization
+
+92
+00:04:38,340 --> 00:04:42,100
+because search engines see what our users see
+
+93
+00:04:42,100 --> 00:04:46,570
+and our users also have a better initial load experience
+
+94
+00:04:46,570 --> 00:04:49,740
+because they don't have that initial flickering.
+
+95
+00:04:49,740 --> 00:04:53,470
+If we inspect the source code of a NextJS page,
+
+96
+00:04:53,470 --> 00:04:55,740
+it's half a page in the NextJS app,
+
+97
+00:04:55,740 --> 00:04:57,440
+then we see that there,
+
+98
+00:04:57,440 --> 00:05:00,700
+it's not just an empty HTML skeleton,
+
+99
+00:05:00,700 --> 00:05:04,610
+but instead all the content is already there
+
+100
+00:05:04,610 --> 00:05:08,910
+in that HTML page, which we got back from the server.
+
+101
+00:05:08,910 --> 00:05:11,789
+Now it is worth noting that with NextJS,
+
+102
+00:05:11,789 --> 00:05:15,460
+after this initial load offered as initial request,
+
+103
+00:05:15,460 --> 00:05:19,120
+we still get a standard React app running in the browser,
+
+104
+00:05:19,120 --> 00:05:22,510
+a standard single page application even,
+
+105
+00:05:22,510 --> 00:05:25,720
+subsequent navigation actions by the user.
+
+106
+00:05:25,720 --> 00:05:29,020
+So when the user then browses our page and navigates
+
+107
+00:05:29,020 --> 00:05:32,960
+around, those actions are all handled by React
+
+108
+00:05:32,960 --> 00:05:37,270
+in the browser to have this fast interactive user experience
+
+109
+00:05:37,270 --> 00:05:40,160
+which we typically wanna offer with React,
+
+110
+00:05:40,160 --> 00:05:41,410
+which was one of the reasons
+
+111
+00:05:41,410 --> 00:05:43,940
+why you would use React typically.
+
+112
+00:05:43,940 --> 00:05:46,860
+So we still get that but for the initial load,
+
+113
+00:05:46,860 --> 00:05:49,580
+we have that pre-rendered page.
+
+114
+00:05:49,580 --> 00:05:51,460
+And that in the end, means that,
+
+115
+00:05:51,460 --> 00:05:53,490
+client site and server-side code is kind
+
+116
+00:05:53,490 --> 00:05:57,330
+of blended together with NextJS.
+
+117
+00:05:57,330 --> 00:05:59,010
+And of course in this course,
+
+118
+00:05:59,010 --> 00:06:02,990
+you are going to learn how things are blending together,
+
+119
+00:06:02,990 --> 00:06:05,560
+how you can write code that runs on a server
+
+120
+00:06:05,560 --> 00:06:08,590
+and how you can write code that runs on the client.
+
+121
+00:06:08,590 --> 00:06:11,830
+You are of course, going to learn all about that.
+
+122
+00:06:11,830 --> 00:06:14,610
+And this is therefore, of the major features
+
+123
+00:06:14,610 --> 00:06:16,590
+that makes up NextJS.
+
+124
+00:06:16,590 --> 00:06:19,150
+This built-in server-side rendering,
+
+125
+00:06:19,150 --> 00:06:24,150
+which on its own probably would already be a strong benefit
+
+126
+00:06:24,240 --> 00:06:28,880
+or a strong reason for why you might want to use NextJS
+
+127
+00:06:28,880 --> 00:06:33,370
+for building your React projects instead of just ReactJS.
+
+128
+00:06:33,370 --> 00:06:36,063
+But it's not the only key feature.
+

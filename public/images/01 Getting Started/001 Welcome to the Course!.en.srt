@@ -1,0 +1,164 @@
+1
+00:00:00,130 --> 00:00:02,310
+<v ->Hi, and welcome to this course.</v>
+
+2
+00:00:02,310 --> 00:00:04,540
+My name is Maximilian Schwarzmüller,
+
+3
+00:00:04,540 --> 00:00:07,240
+and I will be your instructor in this course.
+
+4
+00:00:07,240 --> 00:00:12,240
+Now, this course is about NextJS, a framework for ReactJS.
+
+5
+00:00:12,420 --> 00:00:14,460
+And that might sound strange,
+
+6
+00:00:14,460 --> 00:00:18,860
+because ReactJS itself already is a JavaScript library,
+
+7
+00:00:18,860 --> 00:00:21,100
+but over the next lectures, I will explain
+
+8
+00:00:21,100 --> 00:00:22,883
+what exactly NextJS is,
+
+9
+00:00:23,890 --> 00:00:26,170
+and why using it could be a good idea.
+
+10
+00:00:26,170 --> 00:00:28,240
+Now, I can already say that learning it
+
+11
+00:00:28,240 --> 00:00:32,410
+is a good idea though, because NextJS is super popular,
+
+12
+00:00:32,410 --> 00:00:35,060
+and it does make building React apps,
+
+13
+00:00:35,060 --> 00:00:38,620
+large scale React apps but also small React apps,
+
+14
+00:00:38,620 --> 00:00:41,120
+way easier, because it will give you
+
+15
+00:00:41,120 --> 00:00:43,610
+solutions for common problems,
+
+16
+00:00:43,610 --> 00:00:46,000
+which you have to solve over and over again.
+
+17
+00:00:46,000 --> 00:00:47,840
+And which you'll face in basically
+
+18
+00:00:47,840 --> 00:00:50,710
+any React project you might be working on.
+
+19
+00:00:50,710 --> 00:00:52,790
+Therefore, NextJS is amazing,
+
+20
+00:00:52,790 --> 00:00:55,080
+it is super popular, and in this course
+
+21
+00:00:55,080 --> 00:00:58,870
+you're going to learn it from the ground up, step by step.
+
+22
+00:00:58,870 --> 00:01:00,550
+You don't need to know anything
+
+23
+00:01:00,550 --> 00:01:02,540
+about NextJS to get started,
+
+24
+00:01:02,540 --> 00:01:04,100
+and you will get all the theory,
+
+25
+00:01:04,100 --> 00:01:05,730
+the behind the scenes knowledge,
+
+26
+00:01:05,730 --> 00:01:07,610
+small demos and examples,
+
+27
+00:01:07,610 --> 00:01:10,790
+and all the bigger projects in this course to ensure
+
+28
+00:01:10,790 --> 00:01:14,640
+that by the end of the course, you know how to use NextJS,
+
+29
+00:01:14,640 --> 00:01:17,500
+You know why you use it, what its core features are,
+
+30
+00:01:17,500 --> 00:01:21,340
+and you will be able to build your own NextJS project
+
+31
+00:01:21,340 --> 00:01:23,590
+once you're finished with this course.
+
+32
+00:01:23,590 --> 00:01:26,020
+Now, to see what's in the course, just continue
+
+33
+00:01:26,020 --> 00:01:28,520
+because I got an entire lecture where I walk you
+
+34
+00:01:28,520 --> 00:01:30,680
+through the course, and the content of this course,
+
+35
+00:01:30,680 --> 00:01:33,650
+and of course all that will look at the course curriculum.
+
+36
+00:01:33,650 --> 00:01:35,470
+This course is packed with knowledge,
+
+37
+00:01:35,470 --> 00:01:37,620
+and therefore, let's not waste any time,
+
+38
+00:01:37,620 --> 00:01:38,860
+and let's dive right in,
+
+39
+00:01:38,860 --> 00:01:42,140
+and let's start with the most important question first.
+
+40
+00:01:42,140 --> 00:01:44,730
+What exactly is NextJS and
+
+41
+00:01:44,730 --> 00:01:47,353
+why is using it maybe a good idea?
+

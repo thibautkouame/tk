@@ -1,0 +1,236 @@
+1
+00:00:02,460 --> 00:00:05,290
+<v Maximilian>So we did create that NextJS project</v>
+
+2
+00:00:05,290 --> 00:00:09,270
+here in the terminal with NPX create-next-app,
+
+3
+00:00:09,270 --> 00:00:11,870
+and that gave us a folder which looks like this,
+
+4
+00:00:11,870 --> 00:00:14,030
+which has this kind of content.
+
+5
+00:00:14,030 --> 00:00:17,300
+Attached, you also find that starting project
+
+6
+00:00:17,300 --> 00:00:21,160
+in case it changes over time or looks slightly different
+
+7
+00:00:21,160 --> 00:00:24,730
+because the starting template was changed, for example.
+
+8
+00:00:24,730 --> 00:00:28,200
+So attached, you find that exact project snapshot,
+
+9
+00:00:28,200 --> 00:00:29,750
+which I have here.
+
+10
+00:00:29,750 --> 00:00:32,690
+If you do download the attached snapshot though,
+
+11
+00:00:32,690 --> 00:00:36,000
+there is one extra step you need to go through.
+
+12
+00:00:36,000 --> 00:00:38,040
+You need to open the terminal,
+
+13
+00:00:38,040 --> 00:00:40,950
+and you can use the one built into Visual Studio Code,
+
+14
+00:00:40,950 --> 00:00:43,040
+which is your default terminal.
+
+15
+00:00:43,040 --> 00:00:44,770
+Your default command prompt
+
+16
+00:00:44,770 --> 00:00:47,210
+which ships with your operating system,
+
+17
+00:00:47,210 --> 00:00:50,980
+just already integrated into Visual Studio Code,
+
+18
+00:00:50,980 --> 00:00:54,450
+and conveniently, also already navigated
+
+19
+00:00:54,450 --> 00:00:56,360
+into this project folder.
+
+20
+00:00:56,360 --> 00:00:58,110
+So any commands you run here
+
+21
+00:00:58,110 --> 00:01:01,710
+will execute in the context of your project folder.
+
+22
+00:01:01,710 --> 00:01:04,540
+And here you then need to run npm install
+
+23
+00:01:04,540 --> 00:01:07,530
+if you use that attached snapshot.
+
+24
+00:01:07,530 --> 00:01:08,810
+Because that will then install
+
+25
+00:01:08,810 --> 00:01:10,860
+all the dependencies of this project
+
+26
+00:01:10,860 --> 00:01:13,150
+as defined here in package.json,
+
+27
+00:01:13,150 --> 00:01:16,300
+and store them and their dependencies
+
+28
+00:01:16,300 --> 00:01:18,600
+in the node modules folder.
+
+29
+00:01:18,600 --> 00:01:21,700
+So that's also a folder in which will never work.
+
+30
+00:01:21,700 --> 00:01:24,490
+The three important folders for us here
+
+31
+00:01:24,490 --> 00:01:27,030
+are pages, public, and styles,
+
+32
+00:01:27,030 --> 00:01:31,150
+though pages is by far the most important one.
+
+33
+00:01:31,150 --> 00:01:34,370
+Styles, as you might guess, holds some style files.
+
+34
+00:01:34,370 --> 00:01:35,880
+We can ignore that for now.
+
+35
+00:01:35,880 --> 00:01:37,460
+We'll work on that soon.
+
+36
+00:01:37,460 --> 00:01:42,460
+And public simply holds public resources our page might use.
+
+37
+00:01:42,760 --> 00:01:45,410
+Something like images, for example.
+
+38
+00:01:45,410 --> 00:01:48,110
+Now one thing you might see here in public though,
+
+39
+00:01:48,110 --> 00:01:51,700
+is that unlike in a regular React app,
+
+40
+00:01:51,700 --> 00:01:53,040
+which you, for example,
+
+41
+00:01:53,040 --> 00:01:56,820
+created with create React app with that extra tool,
+
+42
+00:01:56,820 --> 00:01:59,630
+that there in a standard React app,
+
+43
+00:01:59,630 --> 00:02:03,120
+you have a index HTML file in the public folder.
+
+44
+00:02:03,120 --> 00:02:06,780
+Here in the NextJS app, you don't have that.
+
+45
+00:02:06,780 --> 00:02:07,960
+And the reason for this
+
+46
+00:02:07,960 --> 00:02:11,400
+is that NextJS has this built in pre-rendering.
+
+47
+00:02:11,400 --> 00:02:14,380
+And whilst it gives you a single page application,
+
+48
+00:02:14,380 --> 00:02:17,790
+that single page is dynamically pre-rendered
+
+49
+00:02:17,790 --> 00:02:20,740
+when a request reaches the server
+
+50
+00:02:20,740 --> 00:02:25,740
+so that you do return an initial page with content.
+
+51
+00:02:26,210 --> 00:02:29,860
+That is what I talked about earlier in this course as well.
+
+52
+00:02:29,860 --> 00:02:34,060
+This server-side rendering and the pre-rendering of pages.
+
+53
+00:02:34,060 --> 00:02:34,893
+And hence for us,
+
+54
+00:02:34,893 --> 00:02:38,210
+the pages folder will be the most important folder
+
+55
+00:02:38,210 --> 00:02:40,480
+because that is where we will set up
+
+56
+00:02:40,480 --> 00:02:42,320
+that file based routing,
+
+57
+00:02:42,320 --> 00:02:44,070
+and that is there for the folder,
+
+58
+00:02:44,070 --> 00:02:47,680
+which is important for us to define the different pages
+
+59
+00:02:47,680 --> 00:02:50,563
+that should make up our application here.
+

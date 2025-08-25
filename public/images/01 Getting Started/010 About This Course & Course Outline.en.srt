@@ -1,0 +1,616 @@
+1
+00:00:02,320 --> 00:00:03,840
+<v Maximilian>Now, before we dive</v>
+
+2
+00:00:03,840 --> 00:00:06,710
+into all those NextJS features
+
+3
+00:00:06,710 --> 00:00:08,530
+and learn them in depth,
+
+4
+00:00:08,530 --> 00:00:10,580
+I wanna give you a general overview
+
+5
+00:00:10,580 --> 00:00:13,000
+of what you can expect from this course
+
+6
+00:00:13,000 --> 00:00:15,340
+and which content will be in this course.
+
+7
+00:00:15,340 --> 00:00:18,710
+Of course, also simply go through the curriculum,
+
+8
+00:00:18,710 --> 00:00:22,190
+which you can see to see what's included in the course
+
+9
+00:00:22,190 --> 00:00:24,520
+and when you're going to learn what.
+
+10
+00:00:24,520 --> 00:00:27,190
+But in general, you could say that this course
+
+11
+00:00:27,190 --> 00:00:31,110
+has three main types of content,
+
+12
+00:00:31,110 --> 00:00:34,140
+three main content blocks.
+
+13
+00:00:34,140 --> 00:00:37,530
+We have the basics and foundation block,
+
+14
+00:00:37,530 --> 00:00:41,070
+which is about all these key features you have to know
+
+15
+00:00:41,070 --> 00:00:43,000
+when working with NextJS
+
+16
+00:00:43,000 --> 00:00:46,060
+and where I will introduce those key features
+
+17
+00:00:46,060 --> 00:00:48,850
+with theory and small examples.
+
+18
+00:00:48,850 --> 00:00:52,950
+We then also dive into many more advanced concepts
+
+19
+00:00:52,950 --> 00:00:54,130
+throughout this course,
+
+20
+00:00:54,130 --> 00:00:56,020
+the concepts which you will need
+
+21
+00:00:56,020 --> 00:00:58,610
+for your real apps you're building,
+
+22
+00:00:58,610 --> 00:01:01,300
+for the production-ready apps you're building.
+
+23
+00:01:01,300 --> 00:01:05,090
+And we'll also have summary content.
+
+24
+00:01:05,090 --> 00:01:07,710
+So summaries and refreshers,
+
+25
+00:01:07,710 --> 00:01:10,470
+which are there to save your time
+
+26
+00:01:10,470 --> 00:01:12,410
+to allow you to quickly summarize
+
+27
+00:01:12,410 --> 00:01:15,890
+what you learned or to fill gaps, which you might have,
+
+28
+00:01:15,890 --> 00:01:18,470
+for example, related to React.
+
+29
+00:01:18,470 --> 00:01:20,380
+Now, in the course modules
+
+30
+00:01:20,380 --> 00:01:23,730
+that make up this basics and foundation block,
+
+31
+00:01:23,730 --> 00:01:25,330
+and that's important, by the way.
+
+32
+00:01:25,330 --> 00:01:28,210
+These blocks are not the course sections
+
+33
+00:01:28,210 --> 00:01:30,670
+but the categories you could group
+
+34
+00:01:30,670 --> 00:01:32,680
+those course sections into.
+
+35
+00:01:32,680 --> 00:01:35,350
+We will have more course sections
+
+36
+00:01:35,350 --> 00:01:37,420
+than what you will see on this slide.
+
+37
+00:01:37,420 --> 00:01:40,270
+Here I'm just outlining the main concepts
+
+38
+00:01:40,270 --> 00:01:43,080
+and categories of content you will learn.
+
+39
+00:01:43,080 --> 00:01:46,920
+So in this basics and foundation block of content,
+
+40
+00:01:46,920 --> 00:01:50,210
+you will, for example, learn about file-based routing.
+
+41
+00:01:50,210 --> 00:01:52,690
+We will have a course section on that.
+
+42
+00:01:52,690 --> 00:01:56,740
+We are, of course, also going to take a very close look
+
+43
+00:01:56,740 --> 00:02:00,370
+at page pre-rendering, Server-side Rendering
+
+44
+00:02:00,370 --> 00:02:03,350
+and fetching data for page pre-rendering.
+
+45
+00:02:03,350 --> 00:02:06,410
+So preparing and fetching data on the server side
+
+46
+00:02:06,410 --> 00:02:08,420
+instead of on the client side.
+
+47
+00:02:08,420 --> 00:02:10,800
+And when to use which approach
+
+48
+00:02:10,800 --> 00:02:14,210
+because it turns out that we will have different approaches
+
+49
+00:02:14,210 --> 00:02:16,070
+and different solutions here.
+
+50
+00:02:16,070 --> 00:02:21,070
+We will also explore how we can combine NextJS features
+
+51
+00:02:21,380 --> 00:02:25,940
+and NextJS pages with standard React features,
+
+52
+00:02:25,940 --> 00:02:27,860
+standard React components
+
+53
+00:02:27,860 --> 00:02:30,650
+and features like context and refs
+
+54
+00:02:30,650 --> 00:02:32,730
+and everything that makes up React.
+
+55
+00:02:32,730 --> 00:02:33,563
+And you'll see
+
+56
+00:02:33,563 --> 00:02:35,964
+that it is very straightforward and every easy.
+
+57
+00:02:35,964 --> 00:02:38,997
+Nonetheless, we're going to take a look at that as well.
+
+58
+00:02:38,997 --> 00:02:43,450
+And we are also going to explore API routes
+
+59
+00:02:43,450 --> 00:02:48,040
+and how we can build fullstack applications with NextJS.
+
+60
+00:02:48,040 --> 00:02:50,120
+So these are all the core concepts
+
+61
+00:02:50,120 --> 00:02:53,190
+which we'll explore in depth throughout this course.
+
+62
+00:02:53,190 --> 00:02:57,630
+But then we're also going to dive into advanced concepts.
+
+63
+00:02:57,630 --> 00:02:59,900
+We are going to explore
+
+64
+00:02:59,900 --> 00:03:03,320
+optimization opportunities, for example.
+
+65
+00:03:03,320 --> 00:03:06,020
+How we can set page metadata.
+
+66
+00:03:06,020 --> 00:03:08,380
+How we can optimize images
+
+67
+00:03:08,380 --> 00:03:12,210
+so that we serve small images and load them lazily.
+
+68
+00:03:12,210 --> 00:03:13,950
+Things like that.
+
+69
+00:03:13,950 --> 00:03:16,510
+We are going to look behind the scenes
+
+70
+00:03:16,510 --> 00:03:18,200
+and explore some theory.
+
+71
+00:03:18,200 --> 00:03:21,020
+In this course, you're not just going to learn how
+
+72
+00:03:21,020 --> 00:03:23,290
+to do something but also why
+
+73
+00:03:23,290 --> 00:03:25,603
+and what happens behind the scenes.
+
+74
+00:03:26,530 --> 00:03:29,990
+We are, of course, also exploring deployment
+
+75
+00:03:29,990 --> 00:03:32,860
+and configuring our app for deployment,
+
+76
+00:03:32,860 --> 00:03:35,970
+different ways of building a NextJS application
+
+77
+00:03:35,970 --> 00:03:39,350
+and I will show you a detailed deployment example
+
+78
+00:03:39,350 --> 00:03:42,130
+from A to Z where we, at the end,
+
+79
+00:03:42,130 --> 00:03:45,790
+have our NextJS project up and running
+
+80
+00:03:45,790 --> 00:03:48,320
+on a production server.
+
+81
+00:03:48,320 --> 00:03:50,450
+In this course, we are also going
+
+82
+00:03:50,450 --> 00:03:52,550
+to explore authentication
+
+83
+00:03:52,550 --> 00:03:54,760
+and how you can add authentication
+
+84
+00:03:54,760 --> 00:03:56,700
+to your NextJS project
+
+85
+00:03:56,700 --> 00:04:00,340
+because it turns out that it works a bit differently
+
+86
+00:04:00,340 --> 00:04:02,600
+than in standard React apps,
+
+87
+00:04:02,600 --> 00:04:05,530
+that it's easier than in standard React apps
+
+88
+00:04:05,530 --> 00:04:07,490
+and you're going to learn what's easier
+
+89
+00:04:07,490 --> 00:04:10,000
+and how it works in this course.
+
+90
+00:04:10,000 --> 00:04:13,870
+And then regarding those summaries and refreshers,
+
+91
+00:04:13,870 --> 00:04:16,200
+as I said, they are there to save you time
+
+92
+00:04:16,200 --> 00:04:19,020
+and fill gaps because for example,
+
+93
+00:04:19,020 --> 00:04:23,540
+this course includes a full ReactJS refresher module.
+
+94
+00:04:23,540 --> 00:04:26,210
+Actually, that will be the next module
+
+95
+00:04:26,210 --> 00:04:28,430
+after this course section.
+
+96
+00:04:28,430 --> 00:04:32,810
+And you can, of course, skip that ReactJS refresher
+
+97
+00:04:32,810 --> 00:04:34,920
+if you already know React,
+
+98
+00:04:34,920 --> 00:04:37,290
+if you have no gaps and if you're ready
+
+99
+00:04:37,290 --> 00:04:39,560
+to dive into NextJS.
+
+100
+00:04:39,560 --> 00:04:41,000
+But if it has been some time
+
+101
+00:04:41,000 --> 00:04:43,029
+since you last worked with React,
+
+102
+00:04:43,029 --> 00:04:45,910
+if you especially have no experience
+
+103
+00:04:45,910 --> 00:04:49,900
+or not enough experience with functional components
+
+104
+00:04:49,900 --> 00:04:51,590
+and React hooks,
+
+105
+00:04:51,590 --> 00:04:55,030
+or if you only have basic React knowledge in general,
+
+106
+00:04:55,030 --> 00:04:59,090
+then this ReactJS refresher module is there for you
+
+107
+00:04:59,090 --> 00:05:01,620
+to ensure that we're all on the same page.
+
+108
+00:05:01,620 --> 00:05:05,920
+So definitely go through that next module in that case.
+
+109
+00:05:05,920 --> 00:05:09,210
+If you already have a solid understanding of ReactJS,
+
+110
+00:05:09,210 --> 00:05:12,390
+if you know functional components and React hooks,
+
+111
+00:05:12,390 --> 00:05:13,693
+then you can skip it.
+
+112
+00:05:14,620 --> 00:05:16,490
+And at the end of the course,
+
+113
+00:05:16,490 --> 00:05:20,250
+you will also find a NextJS summary module,
+
+114
+00:05:20,250 --> 00:05:23,680
+which summarizes all those key features again
+
+115
+00:05:23,680 --> 00:05:25,120
+and which, therefore, ensures
+
+116
+00:05:25,120 --> 00:05:27,270
+that if you're coming back to this course
+
+117
+00:05:27,270 --> 00:05:29,770
+in a couple of months or even years,
+
+118
+00:05:29,770 --> 00:05:30,960
+you've got a quick way
+
+119
+00:05:30,960 --> 00:05:33,850
+of going through all these key features again
+
+120
+00:05:33,850 --> 00:05:37,110
+without having to go through the entire course again.
+
+121
+00:05:37,110 --> 00:05:39,240
+And even if you just finished the course,
+
+122
+00:05:39,240 --> 00:05:41,440
+that summary module can be very nice
+
+123
+00:05:41,440 --> 00:05:43,940
+for quickly wrapping the course
+
+124
+00:05:43,940 --> 00:05:46,530
+and again, making sure that you fully understood
+
+125
+00:05:46,530 --> 00:05:47,830
+all those key features
+
+126
+00:05:47,830 --> 00:05:50,730
+and that you have the best possible preparation
+
+127
+00:05:50,730 --> 00:05:53,733
+for building your own NextJS projects.
+
+128
+00:05:54,660 --> 00:05:56,270
+Now, that's the content.
+
+129
+00:05:56,270 --> 00:05:59,410
+All this content will be taught with theory
+
+130
+00:05:59,410 --> 00:06:01,780
+and small demos and examples
+
+131
+00:06:01,780 --> 00:06:05,500
+but we will then also have multiple bigger projects,
+
+132
+00:06:05,500 --> 00:06:07,720
+more realistic projects
+
+133
+00:06:07,720 --> 00:06:10,250
+where we also apply what we learned
+
+134
+00:06:10,250 --> 00:06:11,760
+so that you have both,
+
+135
+00:06:11,760 --> 00:06:14,400
+small focused examples and the theory
+
+136
+00:06:14,400 --> 00:06:16,030
+and then the bigger picture
+
+137
+00:06:16,030 --> 00:06:18,470
+where everything comes together.
+
+138
+00:06:18,470 --> 00:06:21,420
+And you also, of course, should practice
+
+139
+00:06:21,420 --> 00:06:22,560
+what you learned.
+
+140
+00:06:22,560 --> 00:06:24,890
+From time to time throughout this course,
+
+141
+00:06:24,890 --> 00:06:27,871
+I will challenge you to try out something on your own
+
+142
+00:06:27,871 --> 00:06:30,550
+but I also challenge you right now
+
+143
+00:06:30,550 --> 00:06:34,160
+to do this even if I don't tell you to try something
+
+144
+00:06:34,160 --> 00:06:35,170
+on your own.
+
+145
+00:06:35,170 --> 00:06:36,867
+Consider pausing the course
+
+146
+00:06:36,867 --> 00:06:38,800
+and the videos from time to time
+
+147
+00:06:38,800 --> 00:06:41,390
+and try out the next steps on your own
+
+148
+00:06:41,390 --> 00:06:44,300
+without looking at my solution first.
+
+149
+00:06:44,300 --> 00:06:48,170
+So definitely also take a hands-on approach on your own
+
+150
+00:06:48,170 --> 00:06:51,770
+and apply what you learned in your own projects outside
+
+151
+00:06:51,770 --> 00:06:54,810
+of this course and also in the bigger course projects
+
+152
+00:06:54,810 --> 00:06:58,660
+before we then build them together throughout this course.
+
+153
+00:06:58,660 --> 00:07:01,650
+This will then ensure that you really understand
+
+154
+00:07:01,650 --> 00:07:02,833
+what you're learning.
+
