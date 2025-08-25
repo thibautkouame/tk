@@ -16,6 +16,7 @@ import { backgroundStyles } from '../utils/backgroundStyles';
 import { StyleDebugger } from '../components/StyleDebugger';
 import SiteStats from '../components/SiteStats';
 import { toast } from "sonner"
+import AuroraText from '@/components/seraui/aurora';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -165,9 +166,10 @@ export default function Home() {
                                         whileHover={{ rotate: 15 }}
                                         transition={{ duration: 0.2 }}
                                     >
+
                                         <Palette className="w-5 h-5 text-green-500" />
                                     </motion.div>
-                                    <span className="text-sm font-medium text-gray-700">Styles</span>
+                                    <AuroraText text="Styles" className="text-sm font-medium text-gray-700" />
                                 </motion.div>
                             )}
                         </AnimatePresence>
@@ -177,8 +179,8 @@ export default function Home() {
                     <AnimatePresence>
                         {isMenuOpen && (
                             <motion.div
-                            
-                        // style={backgroundStyles[currentStyle].style}
+
+                                // style={backgroundStyles[currentStyle].style}
                                 className="absolute bottom-full right-0 mb-2 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-200 min-w-[200px]"
                                 initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                 animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -380,7 +382,7 @@ export default function Home() {
                             >
                                 <Clapperboard className='w-6 h-6 text-purple-500' />
                             </motion.div>
-                            ultra-réalistes avec l'IA. 🎉
+                            <AuroraText text="ultra-réalistes" /> <br /> avec l'IA. 🎉
                         </motion.p>
 
                         <motion.div
@@ -450,7 +452,7 @@ export default function Home() {
 
 
             {/* Floating Dock at the bottom */}
-            <motion.div 
+            <motion.div
                 className="fixed bottom-0 left-0 right-0 z-40"
                 variants={floatingVariants}
                 initial="hidden"
@@ -462,8 +464,8 @@ export default function Home() {
 
 
             {/* Debug Component (Development Only) */}
-            {/* <StyleDebugger /> */}
-            
+            <StyleDebugger />
+
             {/* Site Stats Component */}
             {/* <div className='hidden md:block'>
             <SiteStats />
