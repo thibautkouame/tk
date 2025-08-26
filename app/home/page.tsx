@@ -320,10 +320,36 @@ export default function Home() {
                         transition: { duration: 0.6 }
                     }}
                 >
-                    <Announcement variant="default" className='mt-15'>
-                        <Sparkles className='w-4 h-4 inline-block mx-1 text-yellow-500' />
-                        Une nouvelle formation est disponible...
-                    </Announcement>
+                                         <button
+                         onClick={() => {
+                             // D'abord activer l'onglet Formations
+                             window.dispatchEvent(new CustomEvent('activateFormationsTab'));
+
+                             toast.success("Navigation vers l'onglet formations...", {
+                                description: "Redirection en cours...",
+                                duration: 2000,
+                                icon: "✨",
+                              });
+                             
+                             // Attendre un peu que l'onglet soit activé, puis faire le scroll
+                             setTimeout(() => {
+                                 const formationsSection = document.getElementById('formations-section');
+                                 if (formationsSection) {
+                                     formationsSection.scrollIntoView({
+                                         behavior: 'smooth',
+                                         block: 'start'
+                                     });
+                                 }
+                             }, 100);
+                         }}
+                         className="cursor-pointer transition-all duration-300 hover:scale-105 group"
+                         title="Cliquez pour voir les formations"
+                     >
+                        <Announcement variant="default" className='mt-15 group-hover:bg-blue-50 group-hover:border-blue-200 transition-all duration-300'>
+                            <Sparkles className='w-4 h-4 inline-block mx-1 text-yellow-500 group-hover:animate-pulse' />
+                            Une nouvelle formation est disponible...
+                        </Announcement>
+                    </button>
                 </motion.div>
 
                 <Navbar />
@@ -464,11 +490,11 @@ export default function Home() {
 
 
             {/* Debug Component (Development Only) */}
-            <StyleDebugger />
+            {/* <StyleDebugger /> */}
 
             {/* Site Stats Component */}
             {/* <div className='hidden md:block'>
-            <SiteStats />
+                <SiteStats />
             </div> */}
         </div>
     )

@@ -7,6 +7,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import Modal from '@/components/ui/modal'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useStyleContext } from '../contexts/StyleContext'
+import AuroraText from '@/components/seraui/aurora'
 
 interface Formation {
   id: number
@@ -21,6 +22,8 @@ interface Formation {
   image: string
   video: string
   apprentissages: string[]
+  isNew?: boolean // Added isNew property
+  gratuit?: boolean // Added gratuit property
 }
 
 const formations: Formation[] = [
@@ -31,7 +34,7 @@ const formations: Formation[] = [
     duree: "8 semaines",
     niveau: "Avancé",
     participants: "15 max",
-    prix: "1,200 €",
+    prix: "10,000 FCFA",
     categorie: "Marketing",
     couleur: "blue",
     image: "/images/poster-1.jpg",
@@ -42,7 +45,9 @@ const formations: Formation[] = [
       "Automatisation des campagnes marketing",
       "Optimisation des conversions",
       "Gestion des réseaux sociaux"
-    ]
+    ],
+    isNew: true, // Added isNew property
+    gratuit: false // Added gratuit property
   },
   {
     id: 2,
@@ -62,7 +67,9 @@ const formations: Formation[] = [
       "Communication interpersonnelle",
       "Résolution de conflits",
       "Motivation et engagement"
-    ]
+    ],
+    isNew: false, // Added isNew property
+    gratuit: false // Added gratuit property
   },
   {
     id: 3,
@@ -82,7 +89,9 @@ const formations: Formation[] = [
       "Gestion des sprints",
       "Outils de suivi de projet",
       "Amélioration continue"
-    ]
+    ],
+    isNew: true, // Added isNew property
+    gratuit: false // Added gratuit property
   },
   {
     id: 4,
@@ -102,7 +111,9 @@ const formations: Formation[] = [
       "Développement backend (Node.js)",
       "Bases de données et APIs",
       "Déploiement et DevOps"
-    ]
+    ],
+    isNew: false, // Added isNew property
+    gratuit: true // Added gratuit property
   },
   {
     id: 5,
@@ -122,7 +133,9 @@ const formations: Formation[] = [
       "Analyse exploratoire des données",
       "Visualisation de données",
       "Éthique de l'IA"
-    ]
+    ],
+    isNew: true, // Added isNew property
+    gratuit: false // Added gratuit property
   },
   {
     id: 6,
@@ -142,7 +155,31 @@ const formations: Formation[] = [
       "Design systems et composants",
       "Tests utilisateur et itération",
       "Accessibilité et inclusivité"
-    ]
+    ],
+    isNew: false, // Added isNew property
+    gratuit: false // Added gratuit property
+  },
+  {
+    id: 7,
+    titre: "Introduction à la Programmation",
+    description: "Découvrez les bases de la programmation et la logique de programmation.",
+    duree: "4 semaines",
+    niveau: "Débutant",
+    participants: "10 max",
+    prix: "Gratuit",
+    categorie: "Développement",
+    couleur: "blue",
+    image: "/images/programming.jpg",
+    video: "/videos/programming.mp4",
+    apprentissages: [
+      "Introduction à la programmation",
+      "Syntaxe de base",
+      "Variables et types de données",
+      "Conditions et boucles",
+      "Fonctions et portée"
+    ],
+    isNew: true, // Added isNew property
+    gratuit: true // Added gratuit property
   }
 ]
 
@@ -330,9 +367,18 @@ export default function Formations() {
             
             {/* En-tête de la formation */}
             <div className={`bg-gradient-to-br ${getColorClasses(formation.couleur)} p-4 border-b border-gray-200`}>
-              <div className="flex justify-end mb-2">
+              <div className="flex justify-between items-center mb-2">
+                {/* Badge "New" avec icône sparkle - affiché seulement si isNew est true */}
+                <div className="flex-1">
+                  {formation.isNew && (
+                    <div className="flex items-center gap-2 bg-white bg-opacity-90 rounded-full px-3 py-1 w-fit">
+                      <span className="text-purple-500">✨</span>
+                      <AuroraText text=" New" className="text-sm font-medium text-gray-700" />
+                    </div>
+                  )}
+                </div>
                 
-                <span className="text-lg font-bold flex">{formation.prix}</span>
+                <span className="text-lg font-bold">{formation.gratuit ? 'Gratuit' : formation.prix}</span>
               </div>
               <h3 className='text-xl font-semibold mb-5'>{formation.titre}</h3>
               
@@ -427,7 +473,11 @@ export default function Formations() {
               
               {/* Bouton d'inscription */}
               <motion.button 
-                className="w-full mt-4 bg-gray-900 hover:bg-gray-800 text-white py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
+                className={`w-full mt-4 py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 ${
+                  formation.gratuit 
+                    ? 'bg-green-600 hover:bg-green-700 text-white' 
+                    : 'bg-gray-900 hover:bg-gray-800 text-white'
+                }`}
                 whileHover={{
                   scale: 1.02,
                   transition: { duration: 0.2 }
@@ -436,7 +486,7 @@ export default function Formations() {
                   scale: 0.98
                 }}
               >
-                <span>S'inscrire</span>
+                <span>{formation.gratuit ? 'Accéder gratuitement' : 'S\'inscrire'}</span>
                 <motion.div
                   whileHover={{
                     x: 3,

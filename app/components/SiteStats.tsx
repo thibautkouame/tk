@@ -48,8 +48,8 @@ export default function SiteStats() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
-            <div className="bg-white backdrop-blur-sm border-l-4 border-pink-400 rounded-r-2xl p-4 shadow-lg min-w-[280px]">
-                <div className="space-y-3">
+            <div className="bg-white backdrop-blur-sm border-l-4 ra border-pink-400 rounded-r-2xl p-4 shadow-lg min-w-[280px]">
+                <div className="space-y-2">
                     {/* Titre */}
                     <motion.div
                         className="flex items-center gap-2 text-black/90 text-sm font-medium"
@@ -58,7 +58,7 @@ export default function SiteStats() {
                         transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
                     >
                         <Calendar className="w-4 h-4 text-blue-500" />
-                        <span className="text-blue-500 text-xs">Statistiques du site</span>
+                        <span className="text-blue-500 text-xs">Nouvelle formation disponible dans  </span>
                     </motion.div>
 
                     {/* Temps écoulé */}
@@ -68,32 +68,13 @@ export default function SiteStats() {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                     >
-                        <div className="flex items-center gap-2 text-xs text-black">
-                            <Clock className="w-3 h-3 text-green-400" />
-                            <span>Ce site existe depuis :</span>
-                        </div>
                         <div className="ml-5 space-y-1">
                             <div className="text-white text-sm">
                                 <NumberTicker
-                                    value={timeElapsed.months}
+                                    value={25}
                                     duration={2500}
                                     className="text-xl  text-black"
-                                    suffix="mois"
-                                    decimalPlaces={0}
-                                /> {', '}
-                                <NumberTicker
-                                    value={timeElapsed.weeks}
-                                    duration={2500}
-                                    className="text-xl text-black"
-                                    suffix="semaines"
-                                    decimalPlaces={0}
-                                />
-                                {', '}
-                                <NumberTicker
-                                    value={timeElapsed.days}
-                                    duration={2500}
-                                    className="text-xl text-black"
-                                    suffix="jours"
+                                    suffix="jours ✨"
                                     decimalPlaces={0}
                                 />
 
