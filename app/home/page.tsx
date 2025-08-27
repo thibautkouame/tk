@@ -320,31 +320,31 @@ export default function Home() {
                         transition: { duration: 0.6 }
                     }}
                 >
-                                         <button
-                         onClick={() => {
-                             // D'abord activer l'onglet Formations
-                             window.dispatchEvent(new CustomEvent('activateFormationsTab'));
+                    <button
+                        onClick={() => {
+                            // D'abord activer l'onglet Formations
+                            window.dispatchEvent(new CustomEvent('activateFormationsTab'));
 
-                             toast.success("Navigation vers l'onglet formations...", {
+                            toast.success("Navigation vers l'onglet formations...", {
                                 description: "Redirection en cours...",
                                 duration: 2000,
                                 icon: "✨",
-                              });
-                             
-                             // Attendre un peu que l'onglet soit activé, puis faire le scroll
-                             setTimeout(() => {
-                                 const formationsSection = document.getElementById('formations-section');
-                                 if (formationsSection) {
-                                     formationsSection.scrollIntoView({
-                                         behavior: 'smooth',
-                                         block: 'start'
-                                     });
-                                 }
-                             }, 100);
-                         }}
-                         className="cursor-pointer transition-all duration-300 hover:scale-105 group"
-                         title="Cliquez pour voir les formations"
-                     >
+                            });
+
+                            // Attendre un peu que l'onglet soit activé, puis faire le scroll
+                            setTimeout(() => {
+                                const formationsSection = document.getElementById('formations-section');
+                                if (formationsSection) {
+                                    formationsSection.scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'start'
+                                    });
+                                }
+                            }, 100);
+                        }}
+                        className="cursor-pointer transition-all duration-300 hover:scale-105 group"
+                        title="Cliquez pour voir les formations"
+                    >
                         <Announcement variant="default" className='mt-15 group-hover:bg-blue-50 group-hover:border-blue-200 transition-all duration-300'>
                             <Sparkles className='w-4 h-4 inline-block mx-1 text-yellow-500 group-hover:animate-pulse' />
                             Une nouvelle formation est disponible...
@@ -426,7 +426,28 @@ export default function Home() {
                                 <CopyButtonView />
                             </motion.div>
                             <motion.button
-                                className="min-w-40 relative group transition-all duration-300 ease-in-out bg-blue-50 dark:bg-blue-950 hover:bg-blue-100 dark:hover:bg-blue-900 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-800 h-10 px-4 py-2 rounded-md text-sm font-medium"
+                                onClick={() => {
+                                    // D'abord activer l'onglet Témoignages
+                                    window.dispatchEvent(new CustomEvent('activateTemoignagesTab'));
+
+                                    toast.success("Navigation vers l'onglet témoignages...", {
+                                        description: "Redirection en cours...",
+                                        duration: 2000,
+                                        icon: "🚀",
+                                    });
+
+                                    // Attendre un peu que l'onglet soit activé, puis faire le scroll
+                                    setTimeout(() => {
+                                        const temoignagesSection = document.getElementById('temoignages-section');
+                                        if (temoignagesSection) {
+                                            temoignagesSection.scrollIntoView({
+                                                behavior: 'smooth',
+                                                block: 'start'
+                                            });
+                                        }
+                                    }, 100);
+                                }}
+                                className="min-w-40 relative group transition-all duration-300 ease-in-out bg-blue-50 dark:bg-blue-950 hover:bg-blue-100 dark:hover:bg-blue-900 text-blue-600 dark:text-blue-300 border border-blue-200 dark:border-blue-800 h-10 px-4 py-2 rounded-md text-sm font-medium cursor-pointer"
                                 whileHover={{
                                     scale: 1.05,
                                     y: -2,
@@ -434,6 +455,7 @@ export default function Home() {
                                 }}
                                 whileTap={{ scale: 0.95 }}
                                 transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                                title="Cliquez pour voir les témoignages"
                             >
                                 <div className="w-full flex items-center justify-center gap-2">
                                     <motion.span

@@ -37,7 +37,9 @@ yarn-error.log*
 .vercel
 
 #ignore some files
-public/videos/universSTUDIO.mp4
+# public/videos/universSTUDIO.mp4
+public/videos/*
+
 
 
 # typescript

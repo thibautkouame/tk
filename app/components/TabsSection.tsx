@@ -39,10 +39,20 @@ const TabsSection: React.FC<TabsSectionProps> = ({ activeFormationTab = false })
       });
     };
 
+    const handleActivateTemoignagesTab = () => {
+      setActiveTab('temoignages');
+      // Émettre l'événement immédiatement après le changement d'état
+      requestAnimationFrame(() => {
+        window.dispatchEvent(new CustomEvent('temoignagesTabActivated'));
+      });
+    };
+
     window.addEventListener('activateFormationsTab', handleActivateFormationsTab);
+    window.addEventListener('activateTemoignagesTab', handleActivateTemoignagesTab);
 
     return () => {
       window.removeEventListener('activateFormationsTab', handleActivateFormationsTab);
+      window.removeEventListener('activateTemoignagesTab', handleActivateTemoignagesTab);
     };
   }, []);
 
@@ -92,6 +102,7 @@ const TabsSection: React.FC<TabsSectionProps> = ({ activeFormationTab = false })
         {activeTab === 'temoignages' ? (
           <motion.div
             key="temoignages"
+            id="temoignages-section"
             initial={{ opacity: 0, y: 40, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -30, scale: 0.98 }}
