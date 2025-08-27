@@ -127,7 +127,7 @@ function CopyButton({
           </>
         ) : (
           <>
-            <span>Je m'inscris</span>
+            <span>Catalogue des formations</span>
             
             <ArrowRight
               className={cn(

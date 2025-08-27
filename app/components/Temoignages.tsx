@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Play} from 'lucide-react'
+import { Play } from 'lucide-react'
 import Modal from '@/components/ui/modal'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useStyleContext } from '../contexts/StyleContext'
@@ -20,54 +20,44 @@ interface Temoignage {
 const temoignages: Temoignage[] = [
   {
     id: 1,
-    nom: "Marie Dubois ",
-    poste: "Directrice Marketing",
-    entreprise: "TechCorp ✨",
+    nom: "Jean Marc Ouahou",
+    poste: "Etudiant en ingénierie Numérique",
+    entreprise: "--",
     image: "/images/poster-1.jpg",
-    video: "/videos/universSTUDIO.mp4",
-    description: "Une expérience exceptionnelle avec l'équipe. Leur expertise technique et leur professionnalisme ont dépassé nos attentes.",
-    formation: "Formation Marketing Digital Avancé"
+    video: "/videos/NyamePrologue.mp4",
+    description: "Cette formation fut pour moi une expérience enrichissante. Je suis très satisfait. J'ai beaucoup appris en si peu de temps...",
+    formation: "De l'idée à la réalisation : crée ton premier film avec l'IA en seulement 3 jours !😉"
   },
   {
     id: 2,
-    nom: "Jean Martin",
-    poste: "CEO",
-    entreprise: "InnovStart",
-    image: "/images/tk-ai-logo.png",
-    video: "/videos/2.mp4",
-    description: "Grâce à leur accompagnement, nous avons pu lancer notre produit dans les délais impartis avec un résultat remarquable.",
-    formation: "Formation Leadership & Management"
+    nom: "Konan Lott Yann",
+    poste: "Videaste & Photographe",
+    entreprise: "Kpa Services",
+    image: "/images/univers STUDIO.jpg",
+    video: "/videos/Konan Lott Yann.mp4",
+    description: "Rien à dire ! Impeccable ! Vivement une autre pépite de ce genre ! NB: Le contenu est très intéressant et très bien expliqué ! Je suis fière de ce que j'ai réalisé ! Et au passsage n'hésitez pas de regarder mon rendu à faire des suggestions !",
+    formation: "De l'idée à la réalisation : crée ton premier film avec l'IA en seulement 3 jours !😉"
   },
   {
     id: 3,
-    nom: "Sophie Bernard",
-    poste: "Chef de Projet",
-    entreprise: "DigitalFlow",
-    image: "/images/tk-ai-black-logo.png",
-    video: "/videos/3.mp4",
+    nom: "Ghislain Elvire",
+    poste: "Web entrepreneur",
+    entreprise: "A mon propre compte",
+    image: "/images/Joseph Camy.jpg",
+    video: "/videos/Joseph Camy.mp4",
     description: "Un partenaire de confiance qui comprend parfaitement nos besoins et nous accompagne à chaque étape.",
-    formation: "Formation Gestion de Projet Agile"
+    formation: "De l'idée à la réalisation : crée ton premier film avec l'IA en seulement 3 jours !😉"
   },
   {
     id: 4,
-    nom: "Sophie Bernard",
-    poste: "Chef de Projet",
+    nom: "Clara Koffi",
+    poste: "Chef de Projet Digital",
     entreprise: "DigitalFlow",
-    image: "/images/tk-ai-black-logo.png",
-    video: "/videos/3.mp4",
-    description: "Un partenaire de confiance qui comprend parfaitement nos besoins et nous accompagne à chaque étape.",
-    formation: "Formation Développement Web Full-Stack"
+    image: "/images/DigitalFlow.jpg",
+    video: "/videos/DigitalFlow.mp4",
+    description: "Je crois que cette formation demeure l'un des meilleurs investissements que j'ai pu faire cet été. Grace à cette formation, j'ai appris à faire la promotion de mon produit de manière plus créative. Cela m'a permis de retenir encors plus l'attention de mes clients. Je vous la recommande vivement ! En plus le formateur est super sympa et disponible pour répondre à nos questions.",
+    formation: "Présente le autrement : ton produit mérite d'être vu 🚀"
   },
-  {
-    id: 5,
-    nom: "Sophie Bernard",
-    poste: "Chef de Projet",
-    entreprise: "DigitalFlow",
-    image: "/images/tk-ai-black-logo.png",
-    video: "/videos/3.mp4",
-    description: "Un partenaire de confiance qui comprend parfaitement nos besoins et nous accompagne à chaque étape.",
-    formation: "Formation Data Science & IA"
-  } 
 ]
 
 const containerVariants = {
@@ -168,26 +158,26 @@ export default function Temoignages() {
   }
 
   return (
-    <motion.div 
+    <motion.div
       className='flex flex-col items-center justify-center mt-5 mb-10'
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <motion.h1 
+      <motion.h1
         className={`text-3xl font-bold mb-8 ${['crimson', 'ocean', 'forest'].includes(currentStyle) ? 'text-white' : 'text-gray-800'}`}
         variants={titleVariants}
       >
         Découvrez les réalisations de ceux qui ont suivi nos formations
       </motion.h1>
-      
-      <motion.div 
+
+      <motion.div
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1800px] px-4'
         variants={containerVariants}
       >
         {temoignages.map((temoignage, index) => (
-          <motion.div 
-            key={temoignage.id} 
+          <motion.div
+            key={temoignage.id}
             className='bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300'
             variants={cardVariants}
             whileHover={{
@@ -203,11 +193,11 @@ export default function Temoignages() {
             }}
             custom={index}
           >
-            
+
             {/* Image de couverture avec overlay */}
             <div className='relative h-56 overflow-hidden'>
-              <motion.img 
-                src={temoignage.image} 
+              <motion.img
+                src={temoignage.image}
                 alt={`${temoignage.nom} - ${temoignage.poste}`}
                 className='w-full h-full object-cover'
                 whileHover={{
@@ -218,7 +208,7 @@ export default function Temoignages() {
                   }
                 }}
               />
-              
+
               {/* Overlay avec bouton play */}
               <div className='absolute inset-0 flex items-center justify-center'>
                 <motion.button
@@ -235,13 +225,13 @@ export default function Temoignages() {
             </div>
 
             {/* Contenu du témoignage */}
-            <motion.div 
+            <motion.div
               className='p-6'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 + index * 0.1 }}
             >
-              <motion.h3 
+              <motion.h3
                 className='text-xl font-semibold text-gray-800 mb-2'
                 whileHover={{
                   color: "#3B82F6",
@@ -252,7 +242,7 @@ export default function Temoignages() {
               </motion.h3>
               <p className='text-black mb-1'>{temoignage.poste}</p>
               <p className='text-gray-500 text-sm mb-2'>{temoignage.entreprise}</p>
-              <motion.p 
+              <motion.p
                 className='text-blue-600 font-medium text-sm mb-3'
                 whileHover={{
                   scale: 1.05,
@@ -277,14 +267,14 @@ export default function Temoignages() {
             animation="bounce"
             size="xl"
           >
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.div 
+              <motion.div
                 className="text-center mb-4"
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -297,7 +287,7 @@ export default function Temoignages() {
                   {videoModal.formation}
                 </p>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="flex justify-center"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

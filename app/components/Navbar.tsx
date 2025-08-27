@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Coffee, HomeIcon, Coins, Menu, X } from 'lucide-react'
+import { Coffee, HomeIcon, Coins, Menu, X, BookOpen } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { consts } from '../utils/const'
 import { useStyleContext } from '../contexts/StyleContext'
+import { toast } from 'sonner'
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,6 +14,52 @@ const Navbar = () => {
     const isDarkStyle = ['aurora', 'crimson', 'ocean', 'forest'].includes(currentStyle);
     const isCrimson = currentStyle === 'crimson';
     const iconColor = isCrimson ? 'text-white' : 'text-gray-500';
+
+    // Fonction pour naviguer vers l'onglet Formations
+    const navigateToFormations = () => {
+        // Fermer le menu mobile si ouvert
+        setIsMobileMenuOpen(false);
+
+        // Activer l'onglet Formations
+        window.dispatchEvent(new CustomEvent('activateFormationsTab'));
+
+        toast.success("Navigation vers l'onglet formations...", {
+            description: "Redirection en cours...",
+            duration: 2000,
+            icon: "✨",
+        });
+
+        // Attendre un peu que l'onglet soit activé, puis faire le scroll
+        setTimeout(() => {
+            const formationsSection = document.getElementById('formations-section');
+            if (formationsSection) {
+                formationsSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 100);
+    };
+
+    // Fonction pour naviguer vers l'onglet Témoignages
+    const navigateToTemoignages = () => {
+        // Fermer le menu mobile si ouvert
+        setIsMobileMenuOpen(false);
+
+        // Activer l'onglet Témoignages
+        window.dispatchEvent(new CustomEvent('activateTemoignagesTab'));
+
+        // Attendre un peu que l'onglet soit activé, puis faire le scroll
+        setTimeout(() => {
+            const temoignagesSection = document.getElementById('temoignages-section');
+            if (temoignagesSection) {
+                temoignagesSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }, 100);
+    };
 
     const containerVariants = {
         hidden: { opacity: 0, y: -20 },
@@ -86,7 +133,7 @@ const Navbar = () => {
 
 
     return (
-        <motion.div 
+        <motion.div
             className="fixed top-5 z-[9999] w-full sm:w-3/4 md:w-2/3 lg:w-1/2 bg-transparent backdrop-blur-sm border-1 border-gray-200 rounded-full"
             variants={containerVariants}
             initial="hidden"
@@ -94,41 +141,43 @@ const Navbar = () => {
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    <motion.div 
+                    <motion.div
                         className="flex items-center justify-center"
                         variants={logoVariants}
                     >
-                        <Image 
-                            src={isDarkStyle ? consts.tk_white_logo : consts.tk_black_logo} 
-                            alt="Logo" 
-                            width={25} 
-                            height={25} 
-                            className='hover:scale-100 cursor-pointer hover:animate-pulse transition-all duration-300' 
+                        <Image
+                            src={isDarkStyle ? consts.tk_white_logo : consts.tk_black_logo}
+                            alt="Logo"
+                            width={25}
+                            height={25}
+                            className='hover:scale-100 cursor-pointer hover:animate-pulse transition-all duration-300'
                         />
                     </motion.div>
-                    
-                    <motion.nav 
+
+                    <motion.nav
                         className="hidden md:flex space-x-8 flex-row items-center justify-center"
                         variants={navVariants}
                     >
-                        <motion.a 
-                            href="#" 
-                            className="text-black"
+                        <motion.a
+                            href="#"
+                            className="text-black cursor-pointer"
                             variants={homeIconVariants}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.2 }}
+                            onClick={navigateToTemoignages}
                         >
                             <HomeIcon className={`w-4 h-4 ${iconColor} hover:text-yellow-500 transition-colors`} />
                         </motion.a>
-                        
-                        <motion.a 
-                            href="#" 
-                            className="text-black group relative"
+
+                        <motion.a
+                            href="#"
+                            className="text-black group relative cursor-pointer"
                             variants={coffeeIconVariants}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.2 }}
+                            onClick={navigateToFormations}
                         >
                             <motion.div
                                 whileHover={{ rotate: 360, scale: 1.2 }}
@@ -151,26 +200,28 @@ const Navbar = () => {
                     <div className="md:hidden flex items-center space-x-4">
                         {isMobileMenuOpen ? (
                             <>
-                                <motion.a 
-                                    href="#" 
-                                    className="flex items-center space-x-2 text-gray-700 hover:text-yellow-500 transition-colors"
+                                <motion.a
+                                    href="#"
+                                    className="flex items-center space-x-2 text-gray-700 hover:text-yellow-500 transition-colors cursor-pointer"
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.3 }}
+                                    onClick={navigateToTemoignages}
                                 >
                                     <HomeIcon className={`w-4 h-4 ${iconColor}`} />
                                     <span className="text-xs font-medium">Accueil</span>
                                 </motion.a>
-                                
-                                <motion.a 
-                                    href="#" 
-                                    className="flex items-center space-x-2 text-gray-700 hover:text-yellow-500 transition-colors"
+
+                                <motion.a
+                                    href="#"
+                                    className="flex items-center space-x-2 text-gray-700 hover:text-yellow-500 transition-colors cursor-pointer"
                                     initial={{ opacity: 0, x: -10 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.3, delay: 0.1 }}
+                                    onClick={navigateToFormations}
                                 >
-                                    <Coffee className={`w-4 h-4 ${iconColor}`} />
-                                    <span className="text-xs font-medium">Services</span>
+                                    <BookOpen className={`w-4 h-4 ${iconColor}`} />
+                                    <span className="text-xs font-medium">Formations</span>
                                 </motion.a>
 
                                 <motion.button
