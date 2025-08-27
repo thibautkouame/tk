@@ -37,12 +37,8 @@ yarn-error.log*
 .vercel
 
 #ignore some files
-public/videos/universSTUDIO.mp4
-public/videos/1.mp4
-public/videos/2.mp4
-public/videos/3.mp4
-public/videos/Konan Lott Yann.mp4
-public/videos/NyamePrologue.mp4
+# public/videos/universSTUDIO.mp4
+public/videos/*
 
 
 # typescript
