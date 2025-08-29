@@ -408,7 +408,7 @@ export default function Home() {
                             >
                                 <Clapperboard className='w-6 h-6 text-purple-500' />
                             </motion.div>
-                            <AuroraText text="ultra-réalistes" /> <br /> avec l'IA. 🎉
+                            <AuroraText text="ultra-réalistes" /> <br /> avec l'IA🎉
                         </motion.p>
 
                         <motion.div
