@@ -110,7 +110,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
                                 </div>
                                 <span className="text-xs text-gray-500">+225 0705809881</span>
                             </button>
-                            
+
                             {/* Message d'erreur WhatsApp */}
                             {showWhatsAppError && (
                                 <motion.div
@@ -118,14 +118,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ isOpen, onClose }) => {
                                     animate={{ opacity: 1, y: 0 }}
                                     className="text-red-500 text-xs text-center max-w-32"
                                 >
-                                    Veuillez remplir votre nom et prénoms 😊
+                                    Veuillez remplir vos nom et prénoms 😊
                                 </motion.div>
                             )}
-                            
+
                             {/* Lien WhatsApp caché qui s'ouvre si les champs sont remplis */}
                             {formData.nom.trim() && formData.prenoms.trim() && (
-                                <Link 
-                                    href={`https://wa.me/2250705809881?text=Bonjour, je suis ${formData.nom} ${formData.prenoms} je souhaite avoir plus d'informations sur vos formations`} 
+                                <Link
+                                    href={`https://wa.me/2250705809881?text=Bonjour, je suis ${formData.nom} ${formData.prenoms} je souhaite avoir plus d'informations sur vos formations`}
                                     target="_blank"
                                     className="hidden"
                                     id="whatsapp-link"
