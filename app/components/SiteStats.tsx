@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import { Calendar, Users, TrendingUp, Clock } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 import NumberTicker from '@/components/seraui/ticker'
 
 interface TimeElapsed {
@@ -25,10 +25,11 @@ const calculateTimeElapsed = (startDate: Date): TimeElapsed => {
 }
 
 export default function SiteStats() {
-    const [timeElapsed, setTimeElapsed] = useState<TimeElapsed>({ months: 0, weeks: 0, days: 0 })
+    // const [timeElapsed, setTimeElapsed] = useState<TimeElapsed>({ months: 0, weeks: 0, days: 0 })
+    const [, setTimeElapsed] = useState<TimeElapsed>({ months: 0, weeks: 0, days: 0 })
 
     // Date de départ du site - à modifier selon vos besoins
-    const startDate = new Date('2025-08-12') // Exemple: 1er janvier 2024
+    const startDate = useMemo(() => new Date('2025-08-12'), []) // Exemple: 1er janvier 2024
 
     useEffect(() => {
         const updateTime = () => {

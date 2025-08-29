@@ -123,7 +123,7 @@ function CopyButton({
         {isClicked ? (
           <>
             <Check className="w-4 h-4 text-emerald-500 transition-all duration-300" />
-            <span className="font-semibold">C'est parti !</span>
+                                    <span className="font-semibold">C&apos;est parti !</span>
           </>
         ) : (
           <>

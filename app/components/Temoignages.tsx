@@ -58,6 +58,16 @@ const temoignages: Temoignage[] = [
     description: "Je crois que cette formation demeure l'un des meilleurs investissements que j'ai pu faire cet été. Grace à cette formation, j'ai appris à faire la promotion de mon produit de manière plus créative. Cela m'a permis de retenir encors plus l'attention de mes clients. Je vous la recommande vivement ! En plus le formateur est super sympa et disponible pour répondre à nos questions.",
     formation: "Présente le autrement : ton produit mérite d'être vu 🚀"
   },
+  {
+    id: 5,
+    nom: "tk-ai",
+    poste: "tk-ai - Product Showcase",
+    entreprise: "DigitalFlow", 
+    image: "/images/product-showcase.jpg",
+    video: "/videos/product-showcase.mp4",
+    description: "Product Showcase.",
+    formation: "Présente le autrement : ton produit mérite d'être vu 🚀"
+  },
 ]
 
 const containerVariants = {

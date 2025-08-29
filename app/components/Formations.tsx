@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import { BookOpen, Clock, Users, Star, ArrowRight, Play, X } from 'lucide-react'
+import { BookOpen, Clock, Users, Play } from 'lucide-react'
 import Image from 'next/image'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 import Modal from '@/components/ui/modal'
@@ -141,7 +141,7 @@ const buttonVariants = {
 
 export default function Formations() {
   const { currentStyle } = useStyleContext();
-  const [playingVideo, setPlayingVideo] = useState<number | null>(null)
+
   const [imageModal, setImageModal] = useState<{ isOpen: boolean; image: string; titre: string }>({
     isOpen: false,
     image: '',
@@ -164,9 +164,9 @@ export default function Formations() {
     }
   }
 
-  const closeVideo = () => {
-    setPlayingVideo(null)
-  }
+  // const closeVideo = () => {
+  //   setPlayingVideo(null)
+  // }
 
   const handleImageClick = (image: string, titre: string) => {
     setImageModal({

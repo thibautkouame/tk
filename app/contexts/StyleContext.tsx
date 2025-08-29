@@ -22,11 +22,10 @@ export const useStyleContext = () => {
 
 interface StyleProviderProps {
     children: ReactNode;
-    defaultStyle?: string;
 }
 
-export const StyleProvider: React.FC<StyleProviderProps> = ({ children, defaultStyle = 'grid' }) => {
-    const styleData = useStylePersistance(defaultStyle as BackgroundStyleKey);
+export const StyleProvider: React.FC<StyleProviderProps> = ({ children }) => {
+    const styleData = useStylePersistance();
 
     return (
         <StyleContext.Provider value={styleData}>

@@ -1,5 +1,5 @@
 'use client'
-import React, { MouseEvent, ReactNode, ReactElement, useState, useEffect } from 'react';
+import React, { MouseEvent, ReactNode, ReactElement, useState } from 'react';
 
 // Enhanced Icons
 const XIcon = ({ className = "w-4 h-4" }: { className?: string }) => (

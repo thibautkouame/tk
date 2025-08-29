@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { Toaster as Sonner, ToasterProps } from "sonner"
-import { Clapperboard, Palette, Sparkles, Users2, RotateCcw, Check } from 'lucide-react';
+import { Clapperboard, Palette, Sparkles, Users2, RotateCcw } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FloatingDockApp from '../components/Floating-dock';
 import CopyButtonView from '@/components/ui/button1';
@@ -13,10 +12,10 @@ import Announcement from '@/components/seraui/announcement';
 import { consts } from '../utils/const';
 import { useStyleContext } from '../contexts/StyleContext';
 import { backgroundStyles } from '../utils/backgroundStyles';
-import { StyleDebugger } from '../components/StyleDebugger';
-import SiteStats from '../components/SiteStats';
+
 import { toast } from "sonner"
 import AuroraText from '@/components/seraui/aurora';
+import { StyleDebugger } from '../components/StyleDebugger';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -282,7 +281,7 @@ export default function Home() {
                         </p>
                         <p className="text-sm text-gray-500 mb-3">
                             Créé des filmes
-                            <Clapperboard className='w-6 h-6 inline-block mx-1 text-purple-500 animate-bounce' />ultra-réalistes avec l'IA. 🎉
+                            <Clapperboard className='w-6 h-6 inline-block mx-1 text-purple-500 animate-bounce' />ultra-réalistes avec l&apos;IA. 🎉
                         </p>
                         <div className='flex flex-row items-center justify-center gap-2'>
                             <CopyButtonView />
@@ -385,16 +384,16 @@ export default function Home() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.8, duration: 0.6 }}
                         >
-                            Devenez un professionnel de l'intelligence artificielle générative, créez du contenu époustouflant et faites-vous remarquer.
+                            Devenez un professionnel de l&apos;intelligence artificielle générative, créez du contenu époustouflant et faites-vous remarquer.
                         </motion.p>
-                        <motion.p
+                        <motion.div
                             className={`text-sm mb-3 ${['crimson', 'ocean', 'forest'].includes(currentStyle) ? 'text-white' : 'text-gray-500'}`}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.0, duration: 0.6 }}
                         >
-                            Créé des filmes
-                            <motion.div
+                            <span>Crié des filmes</span>
+                            <motion.span
                                 className="inline-block mx-1"
                                 animate={{
                                     y: [0, -5, 0],
@@ -407,9 +406,9 @@ export default function Home() {
                                 }}
                             >
                                 <Clapperboard className='w-6 h-6 text-purple-500' />
-                            </motion.div>
-                            <AuroraText text="ultra-réalistes" /> <br /> avec l'IA🎉
-                        </motion.p>
+                            </motion.span>
+                            <AuroraText text="ultra-réalistes" /> <br /> avec l&apos;IA🎉
+                        </motion.div>
 
                         <motion.div
                             className='flex flex-row items-center justify-center gap-4'
@@ -513,7 +512,7 @@ export default function Home() {
 
 
             {/* Debug Component (Development Only) */}
-            {/* <StyleDebugger /> */}
+            {/* <StyleDebugger />    */}
 
             {/* Site Stats Component */}
             {/* <div className='hidden md:block'>

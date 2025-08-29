@@ -13,7 +13,6 @@ export const AuroraText = memo(
   ({
     children,
     className = "",
-    text = "",
 
     colors = ["#FF0080", "#7928CA", "#0070F3", "#38bdf8"],
 
