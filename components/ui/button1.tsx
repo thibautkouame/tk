@@ -160,7 +160,7 @@ export default function CopyButtonView() {
           }
         `}
       </style>
-      <CopyButton linkUrl="https://gemini.google.com/" />
+      <CopyButton linkUrl="https://www.google.com/" />
     </div>
   );
 }

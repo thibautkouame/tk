@@ -21,20 +21,20 @@ const temoignages: Temoignage[] = [
   {
     id: 1,
     nom: "Jean Marc Ouahou",
-    poste: "Etudiant en ingénierie Numérique",
+    poste: "Etudiant en Marketing digital",
     entreprise: "--",
     image: "/images/poster-1.jpg",
-    video: "/videos/NyamePrologue.mp4",
+    video: "https://youtu.be/9a1Cqj0BsLs", // Lien YouTube
     description: "Cette formation fut pour moi une expérience enrichissante. Je suis très satisfait. J'ai beaucoup appris en si peu de temps...",
     formation: "De l'idée à la réalisation : crée ton premier film avec l'IA en seulement 3 jours !😉"
   },
   {
     id: 2,
     nom: "Konan Lott Yann",
-    poste: "Videaste & Photographe",
+    poste: "Vidéaste & Photographe",
     entreprise: "Kpa Services",
     image: "/images/univers STUDIO.jpg",
-    video: "/videos/Konan Lott Yann.mp4",
+    video: "https://youtu.be/s-NVcPSEn7k", // Lien YouTube
     description: "Rien à dire ! Impeccable ! Vivement une autre pépite de ce genre ! NB: Le contenu est très intéressant et très bien expliqué ! Je suis fière de ce que j'ai réalisé ! Et au passsage n'hésitez pas de regarder mon rendu à faire des suggestions !",
     formation: "De l'idée à la réalisation : crée ton premier film avec l'IA en seulement 3 jours !😉"
   },
@@ -44,8 +44,8 @@ const temoignages: Temoignage[] = [
     poste: "Web entrepreneur",
     entreprise: "A mon propre compte",
     image: "/images/Joseph Camy.jpg",
-    video: "/videos/Joseph Camy.mp4",
-    description: "Un partenaire de confiance qui comprend parfaitement nos besoins et nous accompagne à chaque étape.",
+    video: "https://youtu.be/gTZxz82wro4",
+    description: "Mr Kouamé est un partenaire de confiance qui comprend parfaitement nos besoins et nous accompagne à chaque étape. Je vous le recommande vivement !",
     formation: "De l'idée à la réalisation : crée ton premier film avec l'IA en seulement 3 jours !😉"
   },
   {
@@ -54,17 +54,17 @@ const temoignages: Temoignage[] = [
     poste: "Chef de Projet Digital",
     entreprise: "DigitalFlow",
     image: "/images/DigitalFlow.jpg",
-    video: "/videos/DigitalFlow.mp4",
+    video: "https://youtu.be/5ctsx_IN2xg", // Lien YouTube
     description: "Je crois que cette formation demeure l'un des meilleurs investissements que j'ai pu faire cet été. Grace à cette formation, j'ai appris à faire la promotion de mon produit de manière plus créative. Cela m'a permis de retenir encors plus l'attention de mes clients. Je vous la recommande vivement ! En plus le formateur est super sympa et disponible pour répondre à nos questions.",
     formation: "Présente le autrement : ton produit mérite d'être vu 🚀"
   },
   {
     id: 5,
-    nom: "tk-ai",
-    poste: "tk-ai - Product Showcase",
-    entreprise: "DigitalFlow", 
+    nom: "Thibaut Kouamé",
+    poste: "Juste moi.",
+    entreprise: "x univers studio", 
     image: "/images/product-showcase.jpg",
-    video: "/videos/product-showcase.mp4",
+    video: "https://youtu.be/FofkC3f9bMc", // Lien YouTube
     description: "Product Showcase.",
     formation: "Présente le autrement : ton produit mérite d'être vu 🚀"
   },
@@ -129,6 +129,13 @@ const playButtonVariants = {
   tap: {
     scale: 0.95
   }
+}
+
+// Fonction pour extraire l'ID YouTube d'une URL
+const getYouTubeVideoId = (url: string) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/
+  const match = url.match(regExp)
+  return (match && match[2].length === 11) ? match[2] : null
 }
 
 export default function Temoignages() {
@@ -267,7 +274,7 @@ export default function Temoignages() {
         ))}
       </motion.div>
 
-      {/* Modal vidéo avec animation bounce */}
+      {/* Modal vidéo YouTube avec animation bounce */}
       <AnimatePresence>
         {videoModal.isOpen && (
           <Modal
@@ -304,12 +311,13 @@ export default function Temoignages() {
                 transition={{ delay: 0.3, duration: 0.4 }}
               >
                 <div className="relative w-full h-96 rounded-lg overflow-hidden">
-                  <video
-                    src={videoModal.video}
-                    controls
-                    autoPlay
-                    className="w-full h-full object-cover rounded-lg"
-                    onEnded={closeVideoModal}
+                  <iframe
+                    src={`https://www.youtube.com/embed/${getYouTubeVideoId(videoModal.video)}?autoplay=1`}
+                    title={videoModal.nom}
+                    className="w-full h-full rounded-lg"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
               </motion.div>

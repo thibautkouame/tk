@@ -31,23 +31,20 @@ const formations: Formation[] = [
     id: 1,
     titre: "Udemy - Comment obtenir certains cours payants d'Udemy gratuitement.",
     description: "Maîtrisez les stratégies marketing modernes, l'analyse de données et l'automatisation des campagnes.",
-    duree: "13 min, 32s",
+    duree: "13 min",
     niveau: "Avancé",
     participants: "15 max",
     prix: "10,000 FCFA",
     categorie: "Marketing",
     couleur: "blue",
     image: "/images/udemy-poster.jpg",
-    video: "/videos/udemy-2.mp4",
+    video: "https://youtu.be/d3wXAAyd8uY", // Lien YouTube
     apprentissages: [
-      "Stratégies de marketing digital avancées",
-      "Analyse de données et métriques KPIs",
-      "Automatisation des campagnes marketing",
-      "Optimisation des conversions",
-      "Gestion des réseaux sociaux"
+      "Utilisez le mode free de Udemy",
+      "Trouvez les cours payants de Udemy gratuitement sur d'autres plateformes.",
     ],
-    isNew: true, // Added isNew property
-    gratuit: true // Added gratuit property
+    isNew: true,
+    gratuit: true
   }
 ]
 
@@ -137,6 +134,13 @@ const buttonVariants = {
   tap: {
     scale: 0.95
   }
+}
+
+// Fonction pour extraire l'ID YouTube d'une URL
+const getYouTubeVideoId = (url: string) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/
+  const match = url.match(regExp)
+  return (match && match[2].length === 11) ? match[2] : null
 }
 
 export default function Formations() {
@@ -399,7 +403,7 @@ export default function Formations() {
         )}
       </AnimatePresence>
 
-      {/* Modal vidéo avec animation bounce */}
+      {/* Modal vidéo YouTube avec animation bounce */}
       <AnimatePresence>
         {videoModal.isOpen && (
           <Modal
@@ -431,12 +435,13 @@ export default function Formations() {
                 transition={{ delay: 0.3, duration: 0.4 }}
               >
                 <div className="relative w-full h-96 rounded-lg overflow-hidden">
-                  <video
-                    src={videoModal.video}
-                    controls
-                    autoPlay
-                    className="w-full h-full object-cover rounded-lg"
-                    onEnded={closeVideoModal}
+                  <iframe
+                    src={`https://www.youtube.com/embed/${getYouTubeVideoId(videoModal.video)}?autoplay=1`}
+                    title={videoModal.titre}
+                    className="w-full h-full rounded-lg"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   />
                 </div>
               </motion.div>
@@ -482,8 +487,8 @@ export default function Formations() {
               transition: { duration: 0.2 }
             }}
           >
-            <div className="text-3xl font-bold text-gray-800 mb-2">15+</div>
-            <div className="text-gray-600">Objectifs </div>
+            <div className="text-3xl font-bold text-gray-800 mb-2">210+</div>
+            <div className="text-gray-600">Projets réalisés</div>
           </motion.div>
         </motion.div>
       </motion.div>
