@@ -494,6 +494,7 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.4, duration: 0.8 }}
                 >
+                    
                     <TabsSection />
                 </motion.div>
             </motion.div>

@@ -29,154 +29,22 @@ interface Formation {
 const formations: Formation[] = [
   {
     id: 1,
-    titre: "Marketing Digital Avancé",
+    titre: "Udemy - Comment obtenir certains cours payants d'Udemy gratuitement.",
     description: "Maîtrisez les stratégies marketing modernes, l'analyse de données et l'automatisation des campagnes.",
-    duree: "8 semaines",
+    duree: "13 min, 32s",
     niveau: "Avancé",
     participants: "15 max",
     prix: "10,000 FCFA",
     categorie: "Marketing",
     couleur: "blue",
-    image: "/images/poster-1.jpg",
-    video: "/videos/universSTUDIO.mp4",
+    image: "/images/udemy-poster.jpg",
+    video: "/videos/udemy-2.mp4",
     apprentissages: [
       "Stratégies de marketing digital avancées",
       "Analyse de données et métriques KPIs",
       "Automatisation des campagnes marketing",
       "Optimisation des conversions",
       "Gestion des réseaux sociaux"
-    ],
-    isNew: true, // Added isNew property
-    gratuit: false // Added gratuit property
-  },
-  {
-    id: 2,
-    titre: "Leadership & Management",
-    description: "Développez vos compétences de leader et de manager d'équipe avec des techniques modernes.",
-    duree: "6 semaines",
-    niveau: "Intermédiaire",
-    participants: "12 max",
-    prix: "980 €",
-    categorie: "Management",
-    couleur: "green",
-    image: "/images/leadership.jpg",
-    video: "/videos/2.mp4",
-    apprentissages: [
-      "Techniques de leadership moderne",
-      "Gestion d'équipe efficace",
-      "Communication interpersonnelle",
-      "Résolution de conflits",
-      "Motivation et engagement"
-    ],
-    isNew: false, // Added isNew property
-    gratuit: false // Added gratuit property
-  },
-  {
-    id: 3,
-    titre: "Gestion de Projet Agile",
-    description: "Apprenez les méthodologies agiles et la gestion de projet moderne pour des résultats optimaux.",
-    duree: "10 semaines",
-    niveau: "Tous niveaux",
-    participants: "20 max",
-    prix: "1,450 €",
-    categorie: "Projet",
-    couleur: "purple",
-    image: "/images/agile-project.jpg",
-    video: "/videos/3.mp4",
-    apprentissages: [
-      "Méthodologies Scrum et Kanban",
-      "Planification et estimation agile",
-      "Gestion des sprints",
-      "Outils de suivi de projet",
-      "Amélioration continue"
-    ],
-    isNew: true, // Added isNew property
-    gratuit: false // Added gratuit property
-  },
-  {
-    id: 4,
-    titre: "Développement Web Full-Stack",
-    description: "Créez des applications web complètes de A à Z avec les technologies les plus récentes.",
-    duree: "12 semaines",
-    niveau: "Débutant",
-    participants: "18 max",
-    prix: "1,800 €",
-    categorie: "Développement",
-    couleur: "orange",
-    image: "/images/web-development.jpg",
-    video: "/videos/1.mp4",
-    apprentissages: [
-      "HTML, CSS et JavaScript moderne",
-      "Frameworks frontend (React, Vue)",
-      "Développement backend (Node.js)",
-      "Bases de données et APIs",
-      "Déploiement et DevOps"
-    ],
-    isNew: false, // Added isNew property
-    gratuit: true // Added gratuit property
-  },
-  {
-    id: 5,
-    titre: "Data Science & IA",
-    description: "Plongez dans l'univers de la science des données et de l'intelligence artificielle.",
-    duree: "14 semaines",
-    niveau: "Avancé",
-    participants: "10 max",
-    prix: "2,200 €",
-    categorie: "Data",
-    couleur: "indigo",
-    image: "/images/data-science.jpg",
-    video: "/videos/2.mp4",
-    apprentissages: [
-      "Python pour la data science",
-      "Machine Learning et Deep Learning",
-      "Analyse exploratoire des données",
-      "Visualisation de données",
-      "Éthique de l'IA"
-    ],
-    isNew: true, // Added isNew property
-    gratuit: false // Added gratuit property
-  },
-  {
-    id: 6,
-    titre: "Design UX/UI Avancé",
-    description: "Créez des expériences utilisateur exceptionnelles avec les meilleures pratiques du design.",
-    duree: "9 semaines",
-    niveau: "Intermédiaire",
-    participants: "14 max",
-    prix: "1,350 €",
-    categorie: "Design",
-    couleur: "pink",
-    image: "/images/ux-design.jpg",
-    video: "/videos/3.mp4",
-    apprentissages: [
-      "Recherche utilisateur et personas",
-      "Wireframing et prototypage",
-      "Design systems et composants",
-      "Tests utilisateur et itération",
-      "Accessibilité et inclusivité"
-    ],
-    isNew: false, // Added isNew property
-    gratuit: false // Added gratuit property
-  },
-  {
-    id: 7,
-    titre: "Introduction à la Programmation",
-    description: "Découvrez les bases de la programmation et la logique de programmation.",
-    duree: "4 semaines",
-    niveau: "Débutant",
-    participants: "10 max",
-    prix: "Gratuit",
-    categorie: "Développement",
-    couleur: "blue",
-    image: "/images/programming.jpg",
-    video: "/videos/programming.mp4",
-    apprentissages: [
-      "Introduction à la programmation",
-      "Syntaxe de base",
-      "Variables et types de données",
-      "Conditions et boucles",
-      "Fonctions et portée"
     ],
     isNew: true, // Added isNew property
     gratuit: true // Added gratuit property
@@ -325,30 +193,30 @@ export default function Formations() {
   }
 
   return (
-    <motion.div 
+    <motion.div
       className='flex flex-col items-center justify-center mt-5 mb-10'
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <motion.div 
+      <motion.div
         className="text-center mb-8"
         variants={titleVariants}
       >
         <h1 className={`text-3xl font-bold mb-4 ${['crimson', 'ocean', 'forest'].includes(currentStyle) ? 'text-white' : 'text-gray-800'}`}>Nos Formations</h1>
         <p className={`max-w-2xl ${['crimson', 'ocean', 'forest'].includes(currentStyle) ? 'text-white' : 'text-gray-600'}`}>
-          Découvrez nos programmes de formation spécialisés conçus pour développer vos compétences 
+          Découvrez nos programmes de formation spécialisés conçus pour développer vos compétences
           et accélérer votre carrière professionnelle.
         </p>
       </motion.div>
-      
-      <motion.div 
+
+      <motion.div
         className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-[1800px] px-4'
         variants={containerVariants}
       >
         {formations.map((formation, index) => (
-          <motion.div 
-            key={formation.id} 
+          <motion.div
+            key={formation.id}
             className='bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300'
             variants={cardVariants}
             whileHover={{
@@ -364,7 +232,7 @@ export default function Formations() {
             }}
             custom={index}
           >
-            
+
             {/* En-tête de la formation */}
             <div className={`bg-gradient-to-br ${getColorClasses(formation.couleur)} p-4 border-b border-gray-200`}>
               <div className="flex justify-between items-center mb-2">
@@ -373,15 +241,15 @@ export default function Formations() {
                   {formation.isNew && (
                     <div className="flex items-center gap-2 bg-white bg-opacity-90 rounded-full px-3 py-1 w-fit">
                       <span className="text-purple-500">✨</span>
-                      <AuroraText text=" New" className="text-sm font-medium text-gray-700" />
+                      <AuroraText text="Nouveau" className="text-sm font-medium text-gray-700" />
                     </div>
                   )}
                 </div>
-                
+
                 <span className="text-lg font-bold">{formation.gratuit ? 'Gratuit' : formation.prix}</span>
               </div>
               <h3 className='text-xl font-semibold mb-5'>{formation.titre}</h3>
-              
+
               {/* Image de présentation de la formation avec bouton demo */}
               <div className="relative w-full h-32 rounded-lg overflow-hidden">
                 <TooltipProvider>
@@ -411,7 +279,7 @@ export default function Formations() {
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
-                
+
                 {/* Bouton "Voir la demo" */}
                 <div className="absolute bottom-2 right-2">
                   <motion.button
@@ -430,14 +298,14 @@ export default function Formations() {
             </div>
 
             {/* Détails de la formation */}
-            <motion.div 
+            <motion.div
               className='p-4 space-y-3'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 + index * 0.1 }}
             >
               <div>
-              {formation.description}
+                {formation.description}
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <Clock className="w-4 h-4" />
@@ -451,14 +319,14 @@ export default function Formations() {
                 <Users className="w-4 h-4" />
                 <span>{formation.participants}</span>
               </div>
-              
+
               {/* Section "Ce que vous apprendrez" */}
               <div className="mt-4">
                 <h4 className="text-sm font-semibold text-gray-800 mb-2">Ce que vous apprendrez :</h4>
                 <ul className="space-y-1">
                   {formation.apprentissages.map((apprentissage, index) => (
-                    <motion.li 
-                      key={index} 
+                    <motion.li
+                      key={index}
                       className="text-xs text-gray-600 flex items-start gap-2"
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -470,14 +338,13 @@ export default function Formations() {
                   ))}
                 </ul>
               </div>
-              
+
               {/* Bouton d'inscription */}
-              <motion.button 
-                className={`w-full mt-4 py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 ${
-                  formation.gratuit 
-                    ? 'bg-green-600 hover:bg-green-700 text-white' 
+              <motion.button
+                className={`w-full mt-4 py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 ${formation.gratuit
+                    ? 'bg-green-600 hover:bg-green-700 text-white'
                     : 'bg-gray-900 hover:bg-gray-800 text-white'
-                }`}
+                  }`}
                 whileHover={{
                   scale: 1.02,
                   transition: { duration: 0.2 }
@@ -486,14 +353,14 @@ export default function Formations() {
                   scale: 0.98
                 }}
               >
-                <span>{formation.gratuit ? 'Accéder gratuitement' : 'S\'inscrire'}</span>
+                <span>{formation.gratuit ? 'Accès gratuit' : 'S\'inscrire'}</span>
                 <motion.div
                   whileHover={{
                     x: 3,
                     transition: { duration: 0.2 }
                   }}
                 >
-                  <ArrowRight className="w-4 h-4" />
+                  {/* <ArrowRight className="w-4 h-4" /> */}
                 </motion.div>
               </motion.button>
             </motion.div>
@@ -511,7 +378,7 @@ export default function Formations() {
             animation="bounce"
             size="lg"
           >
-            <motion.div 
+            <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -542,14 +409,14 @@ export default function Formations() {
             animation="bounce"
             size="xl"
           >
-            <motion.div 
+            <motion.div
               className="space-y-4"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3 }}
             >
-              <motion.p 
+              <motion.p
                 className="text-gray-600 text-center"
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -557,7 +424,7 @@ export default function Formations() {
               >
                 Découvrez cette formation en action
               </motion.p>
-              <motion.div 
+              <motion.div
                 className="flex justify-center"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -579,7 +446,7 @@ export default function Formations() {
       </AnimatePresence>
 
       {/* Section statistiques */}
-      <motion.div 
+      <motion.div
         className="mt-12 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-8 w-full max-w-4xl"
         variants={statsVariants}
         whileHover={{
@@ -587,7 +454,7 @@ export default function Formations() {
           transition: { duration: 0.3 }
         }}
       >
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
           variants={containerVariants}
         >
@@ -597,7 +464,7 @@ export default function Formations() {
               transition: { duration: 0.2 }
             }}
           >
-            <div className="text-3xl font-bold text-gray-800 mb-2">500+</div>
+            <div className="text-3xl font-bold text-gray-800 mb-2">10+</div>
             <div className="text-gray-600">Formés avec succès</div>
           </motion.div>
           <motion.div
@@ -606,7 +473,7 @@ export default function Formations() {
               transition: { duration: 0.2 }
             }}
           >
-            <div className="text-3xl font-bold text-gray-800 mb-2">98%</div>
+            <div className="text-3xl font-bold text-gray-800 mb-2">100%</div>
             <div className="text-gray-600">Taux de satisfaction</div>
           </motion.div>
           <motion.div
@@ -616,7 +483,7 @@ export default function Formations() {
             }}
           >
             <div className="text-3xl font-bold text-gray-800 mb-2">15+</div>
-            <div className="text-gray-600">Années d'expérience</div>
+            <div className="text-gray-600">Objectifs </div>
           </motion.div>
         </motion.div>
       </motion.div>
