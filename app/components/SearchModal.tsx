@@ -80,7 +80,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                                 strokeWidth="2"
                                 strokeLinecap="round"
                                 strokeLinejoin="round"
-                                className="text-gray-500 dark:text-gray-400"
+                                className="text-red-500 dark:text-gray-400"
                             >
                                 <line x1="18" y1="6" x2="6" y2="18" />
                                 <line x1="6" y1="6" x2="18" y2="18" />
@@ -96,9 +96,9 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                placeholder="Cette fonctionnalité n'est pas encore disponible"
+                                placeholder="Cette fonctionnalité n'est pas encore disponible..."
                                 //  placeholder="Que recherchez-vous ?"
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 transition-all"
+                                className="w-full pl-10 pr-4 py-3 border border-gray-300 placeholder:text-sm dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 transition-all"
                                 autoFocus
                                 disabled
                             />
@@ -122,12 +122,12 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                     </form>
 
                     {/* Quick Actions */}
-                    <div className="px-6 pb-6">
+                    {/* <div className="px-6 pb-6">
                         <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                            Recherches rapides :
+                            Recherches rapides
                         </p>
                         <div className="flex flex-wrap gap-2">
-                            {["Formations", "Contact", "Services", "À propos"].map((tag) => (
+                            {["Témoignages", "Formations", "Contact", "À propos"].map((tag) => (
                                 <button
                                     key={tag}
                                     onClick={() => {
@@ -138,11 +138,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                                     }}
                                     className="px-3 py-1.5 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                                 >
-                                    {/* {tag} */}
+                                    {tag}
                                 </button>
                             ))}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </motion.div>
         </motion.div>
