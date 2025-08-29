@@ -392,7 +392,7 @@ export default function Home() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 1.0, duration: 0.6 }}
                         >
-                            <span>Crié des filmes</span>
+                            <span>Crée des filmes</span>
                             <motion.span
                                 className="inline-block mx-1"
                                 animate={{
