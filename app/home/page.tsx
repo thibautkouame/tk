@@ -15,7 +15,7 @@ import { backgroundStyles } from '../utils/backgroundStyles';
 
 import { toast } from "sonner"
 import AuroraText from '@/components/seraui/aurora';
-import { StyleDebugger } from '../components/StyleDebugger';
+// import { StyleDebugger } from '../components/StyleDebugger';
 
 const containerVariants = {
     hidden: { opacity: 0 },
