@@ -5,7 +5,8 @@ import { createPortal } from 'react-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Maximize2, Minimize2, Calendar, Clock, User, ExternalLink } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import  Image  from 'next/image'
+import Image from 'next/image'
+import { AuroraText } from "@/components/seraui/aurora";
 
 interface BlogPost {
   id: number
@@ -69,9 +70,9 @@ const BlogModal: React.FC<BlogModalProps> = ({ isOpen, onClose, article }) => {
   }
 
   const modalVariants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.8, 
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
       y: 50,
       borderRadius: "1rem"
     },
@@ -134,8 +135,8 @@ const BlogModal: React.FC<BlogModalProps> = ({ isOpen, onClose, article }) => {
             className={cn(
               "relative shadow-2xl w-full mx-4 overflow-hidden",
               "bg-white",
-              isMaximized 
-                ? "h-screen max-h-screen rounded-none" 
+              isMaximized
+                ? "h-screen max-h-screen rounded-none"
                 : "max-h-[90vh] rounded-2xl max-w-4xl"
             )}
             variants={modalVariants}
@@ -147,12 +148,14 @@ const BlogModal: React.FC<BlogModalProps> = ({ isOpen, onClose, article }) => {
             {/* Header avec style iOS */}
             <div className="flex items-center justify-between p-4 bg-gray-50 border-b border-gray-200">
               {/* Logo à gauche */}
-                <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3">
 
                 <Image
                   src="/images/tk-black-logo.png"
                   alt="Blog TK-AI"
                   className="w-8 h-8 object-contain rounded"
+                  width={100}
+                  height={100}
                 />
               </div>
 
@@ -196,7 +199,7 @@ const BlogModal: React.FC<BlogModalProps> = ({ isOpen, onClose, article }) => {
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.6 }}
                 />
-                
+
                 {/* Overlay avec badge catégorie */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute bottom-4 left-4">
@@ -289,7 +292,7 @@ const BlogModal: React.FC<BlogModalProps> = ({ isOpen, onClose, article }) => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7, duration: 0.6 }}
                   >
-                    <motion.button
+                    {/* <motion.button
                       onClick={() => window.open(article.lien, '_blank')}
                       className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-200 flex items-center gap-2"
                       whileHover={{ scale: 1.05 }}
@@ -297,9 +300,11 @@ const BlogModal: React.FC<BlogModalProps> = ({ isOpen, onClose, article }) => {
                     >
                       <span>Lire l&apos;article complet</span>
                       <ExternalLink className="w-4 h-4" />
-                    </motion.button>
+                    </motion.button> */}
                   </motion.div>
                 )}
+                <AuroraText className="text-sm font-semibold text-gray-900 dark:text-white">Revenez plus tard. Le contenu complet sera bientôt disponible.
+                </AuroraText>
               </div>
             </div>
           </motion.div>

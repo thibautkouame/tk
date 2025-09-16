@@ -24,43 +24,43 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    titre: "L'IA Générative : Révolution ou Évolution ?",
-    description: "Découvrez comment l'intelligence artificielle générative transforme notre façon de créer du contenu et quelles opportunités elle offre.",
-    contenu: "L'intelligence artificielle générative représente une révolution majeure dans le domaine de la création de contenu. De la génération de texte à la création d'images et de vidéos, ces technologies ouvrent de nouvelles perspectives créatives...",
+    titre: "Auth - Qu'est-ce que l'authentification, l'autorisation ? 🤔",
+    description: "Dans cet article, nous expliquons les différents types d'autorisations. Découvrez quand utiliser RBAC, ABAC, ACL et d'autres méthodes. Une analyse complète pour mieux comprendre chaque approche.",
+    contenu: "Qu'est-ce que l'autorisation ? L'autorisation est le processus qui détermine les actions ou les ressources auxquelles un utilisateur est autorisé à accéder après s'être authentifié.",
     auteur: "Thibaut Kouamé",
-    date: "15 Janvier 2024",
+    date: "15 Septembre 2025",
     tempsLecture: "5 min",
     image: "/images/auth-image.png",
-    categorie: "IA & Innovation",
+    categorie: "Tech",
     tags: ["IA", "Innovation", "Technologie"],
     lien: "https://example.com/blog/ia-generative"
   },
-  {
-    id: 2,
-    titre: "Créer des Films avec l'IA : Guide Complet",
-    description: "Apprenez les techniques avancées pour créer des films époustouflants en utilisant l'intelligence artificielle.",
-    contenu: "La création de films avec l'IA n'est plus de la science-fiction. Avec les outils modernes, vous pouvez créer des productions de qualité professionnelle...",
-    auteur: "Thibaut Kouamé",
-    date: "10 Janvier 2024",
-    tempsLecture: "8 min",
-    image: "/images/poster-1.jpg",
-    categorie: "Tutoriel",
-    tags: ["Cinéma", "IA", "Tutoriel"],
-    lien: "https://example.com/blog/films-ia"
-  },
-  {
-    id: 3,
-    titre: "Marketing Digital : Stratégies IA-Powered",
-    description: "Explorez comment intégrer l'IA dans vos stratégies marketing pour maximiser l'engagement et les conversions.",
-    contenu: "Le marketing digital évolue rapidement avec l'intégration de l'IA. Découvrez les stratégies les plus efficaces pour rester compétitif...",
-    auteur: "Thibaut Kouamé",
-    date: "5 Janvier 2024",
-    tempsLecture: "6 min",
-    image: "/images/product-showcase.jpg",
-    categorie: "Marketing",
-    tags: ["Marketing", "IA", "Digital"],
-    lien: "https://example.com/blog/marketing-ia"
-  }
+  // {
+  //   id: 2,
+  //   titre: "Créer des Films avec l'IA : Guide Complet",
+  //   description: "Apprenez les techniques avancées pour créer des films époustouflants en utilisant l'intelligence artificielle.",
+  //   contenu: "La création de films avec l'IA n'est plus de la science-fiction. Avec les outils modernes, vous pouvez créer des productions de qualité professionnelle...",
+  //   auteur: "Thibaut Kouamé",
+  //   date: "10 Janvier 2024",
+  //   tempsLecture: "8 min",
+  //   image: "/images/poster-1.jpg",
+  //   categorie: "Tutoriel",
+  //   tags: ["Cinéma", "IA", "Tutoriel"],
+  //   lien: "https://example.com/blog/films-ia"
+  // },
+  // {
+  //   id: 3,
+  //   titre: "Marketing Digital : Stratégies IA-Powered",
+  //   description: "Explorez comment intégrer l'IA dans vos stratégies marketing pour maximiser l'engagement et les conversions.",
+  //   contenu: "Le marketing digital évolue rapidement avec l'intégration de l'IA. Découvrez les stratégies les plus efficaces pour rester compétitif...",
+  //   auteur: "Thibaut Kouamé",
+  //   date: "5 Janvier 2024",
+  //   tempsLecture: "6 min",
+  //   image: "/images/product-showcase.jpg",
+  //   categorie: "Marketing",
+  //   tags: ["Marketing", "IA", "Digital"],
+  //   lien: "https://example.com/blog/marketing-ia"
+  // }
 ]
 
 const containerVariants = {
